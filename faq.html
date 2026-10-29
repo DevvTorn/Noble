@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n-meta="meta_title">Частые вопросы — Noble Launcher (бесплатный лаунчер Minecraft)</title>
+  <meta name="description" content="Ответы на частые вопросы о Noble Launcher: аккаунты Ely.by, предупреждение SmartScreen, безопасность оптимизации, выбор шрифта, версии и загрузчики, перенос сборок на другой диск." data-i18n-meta="meta_description">
+  
+  <meta name="author" content="Noble Launcher">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://noblelauncher.ru/faq.html">
+  <link rel="alternate" hreflang="ru" href="https://noblelauncher.ru/faq.html?lang=ru">
+  <link rel="alternate" hreflang="en" href="https://noblelauncher.ru/faq.html?lang=en">
+  <link rel="alternate" hreflang="x-default" href="https://noblelauncher.ru/faq.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Noble Launcher">
+  <meta property="og:url" content="https://noblelauncher.ru/faq.html">
+  <meta property="og:title" content="Частые вопросы — Noble Launcher" data-i18n-meta="og_title">
+  <meta property="og:description" content="Аккаунты, SmartScreen, оптимизация, шрифты, загрузчики и перенос сборок — короткие ответы." data-i18n-meta="og_description">
+  <meta property="og:image" content="https://noblelauncher.ru/assets/screenshots/main-ru.png">
+  <meta property="og:image:width" content="1264">
+  <meta property="og:image:height" content="761">
+  <meta property="og:image:alt" content="Noble Launcher 2.9.0" data-i18n-meta="og_image_alt">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:locale:alternate" content="en_US">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Частые вопросы — Noble Launcher" data-i18n-meta="twitter_title">
+  <meta name="twitter:description" content="Аккаунты, SmartScreen, оптимизация, шрифты, загрузчики и перенос сборок — короткие ответы." data-i18n-meta="twitter_description">
+  <meta name="twitter:image" content="https://noblelauncher.ru/assets/screenshots/main-ru.png">
+  <!-- Подтверждение владения: вставьте коды из Google Search Console и Яндекс.Вебмастера -->
+  <meta name="google-site-verification" content="GOOGLE_VERIFICATION_CODE">
+  <meta name="yandex-verification" content="YANDEX_VERIFICATION_CODE">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" sizes="180x180">
+  <style>
+    :root {
+      --bg: #0a0e0c;
+      --panel: #101613;
+      --panel2: #161e1a;
+      --panel3: #1e2823;
+      --line: #28332d;
+      --line2: #3a4a41;
+      --ink: #eef4ee;
+      --ink2: #aab6ad;
+      --ink3: #78857c;
+      --ink4: #525d55;
+      --red: #d32f2f;
+      --red2: #e53935;
+      --red-dark: #8e1613;
+      --gold: #f2b633;
+      --ok: #57d07a;
+      --hard: 4px 4px 0 rgba(0, 0, 0, 0.55);
+      --hard-sm: 3px 3px 0 rgba(0, 0, 0, 0.5);
+      --radius: 12px;
+      --radius-sm: 8px;
+      --t: 0.24s;
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      /* task12: обычный современный sans-serif вместо Minecraft-шрифта
+         (системный стек одинаково хорошо выглядит в RU и EN). */
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      font-size: 16.5px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    img { display: block; max-width: 100%; }
+
+    a { color: var(--red2); text-decoration: none; }
+    a:hover { color: #ff5b63; }
+
+    code {
+      font-family: "Cascadia Mono", Consolas, monospace; font-size: 0.92em;
+      background: var(--panel3); border: 1px solid var(--line);
+      padding: 1px 7px; border-radius: 5px; color: var(--ink);
+    }
+
+    ::selection { background: var(--red); color: #fff; }
+    :focus-visible { outline: 2px solid var(--red2); outline-offset: 2px; border-radius: 4px; }
+
+    /* Едва заметная пиксельная сетка фона */
+    body::before {
+      content: '';
+      position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      background-image: radial-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px);
+      background-size: 22px 22px;
+    }
+
+    .wrap { width: min(1140px, calc(100% - 40px)); margin: 0 auto; position: relative; z-index: 1; }
+
+    .skip { position: absolute; left: -9999px; top: 0; background: var(--red); color: #fff; padding: 10px 16px; z-index: 100; }
+    .skip:focus { left: 10px; top: 10px; }
+
+    /* ---------- Шапка ---------- */
+    .site-header {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(10, 14, 12, 0.82);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+      transition: box-shadow var(--t);
+    }
+    .site-header.scrolled { box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45); }
+    .header-row { display: flex; align-items: center; gap: 18px; height: 68px; }
+    .brand { display: flex; align-items: center; gap: 11px; color: var(--ink); font-weight: 700; font-size: 18px; letter-spacing: 0.2px; }
+    .brand img { width: 34px; height: 34px; border-radius: 8px; box-shadow: 0 3px 0 var(--red-dark); }
+    .main-nav { display: flex; gap: 4px; margin-left: auto; }
+    .main-nav a {
+      color: var(--ink2); font-size: 13.5px; font-weight: 600; letter-spacing: 0.3px;
+      padding: 8px 12px; border-radius: 7px; transition: color var(--t), background var(--t);
+    }
+    .main-nav a:hover { color: var(--ink); background: var(--panel2); }
+    .main-nav a[aria-current='page'] { color: #fff; background: var(--red); }
+    .header-actions { display: flex; align-items: center; gap: 10px; }
+
+    /* task12: маленький переключатель языка в правом верхнем углу */
+    .lang-switch { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--panel); }
+    .lang-switch button {
+      padding: 7px 10px; font: inherit; font-size: 12px; font-weight: 700; letter-spacing: 0.4px;
+      color: var(--ink3); background: transparent; border: none; cursor: pointer;
+      transition: background var(--t), color var(--t);
+    }
+    .lang-switch button:hover { color: var(--ink); }
+    .lang-switch button[aria-pressed='true'] { background: var(--red); color: #fff; }
+
+    .tg-link {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 36px; height: 36px; border-radius: 8px; color: #6cc7ee;
+      border: 1px solid var(--line); background: var(--panel);
+      transition: transform var(--t) var(--ease-back), border-color var(--t), box-shadow var(--t);
+    }
+    .tg-link:hover { transform: translate(-1px, -1px); border-color: #229ed9; box-shadow: var(--hard-sm); color: #8ad6f5; }
+    .tg-link svg { width: 18px; height: 18px; fill: currentColor; }
+
+    .burger { display: none; width: 40px; height: 40px; border-radius: 8px; border: 1px solid var(--line); background: var(--panel); color: var(--ink2); cursor: pointer; }
+    .burger svg { width: 18px; height: 18px; fill: currentColor; margin: auto; }
+
+    /* ---------- Кнопки ---------- */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      padding: 13px 22px; border-radius: var(--radius-sm);
+      font: inherit; font-size: 15px; font-weight: 600; letter-spacing: 0.2px;
+      background: var(--panel3); color: var(--ink); border: 1px solid var(--line2);
+      cursor: pointer; white-space: nowrap;
+      transition: transform 0.15s, box-shadow 0.15s, background var(--t), border-color var(--t), color var(--t);
+    }
+    .btn svg { width: 18px; height: 18px; fill: currentColor; flex-shrink: 0; transition: transform var(--t) var(--ease-back); }
+    .btn:hover { transform: translate(-2px, -2px); box-shadow: var(--hard); background: var(--panel2); }
+    .btn:active { transform: translate(1px, 1px); box-shadow: none; }
+    .btn:hover svg { transform: scale(1.12); }
+    .btn-red { background: var(--red); border-color: var(--red2); color: #fff; box-shadow: 0 4px 0 var(--red-dark); }
+    .btn-red:hover { background: var(--red2); box-shadow: 0 6px 0 var(--red-dark), 0 8px 26px rgba(229, 9, 20, 0.4); }
+    .btn-red:active { box-shadow: 0 1px 0 var(--red-dark); }
+    .btn-ghost { background: transparent; }
+    .btn-lg { padding: 17px 32px; font-size: 17px; }
+    .btn-sm { padding: 9px 14px; font-size: 13.5px; }
+
+    /* ---------- Герой ---------- */
+    .hero { padding: 66px 0 44px; position: relative; overflow: hidden; }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr); gap: 44px; align-items: center; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 12px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: var(--gold);
+      margin-bottom: 14px;
+    }
+    .eyebrow::before { content: ''; width: 10px; height: 10px; background: var(--gold); box-shadow: 2px 2px 0 rgba(0,0,0,.5); }
+    h1 {
+      font-size: clamp(34px, 5vw, 54px); font-weight: 800; line-height: 1.08; color: #fff;
+      letter-spacing: -0.5px; margin-bottom: 16px;
+    }
+    h1 .accent { color: var(--red2); }
+    .lead { font-size: 18px; color: var(--ink2); max-width: 540px; margin-bottom: 12px; }
+    .sub { font-size: 14.5px; color: var(--ink3); max-width: 540px; margin-bottom: 24px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 14px; }
+    .file-note { font-size: 13px; color: var(--ink4); letter-spacing: 0.2px; }
+    .file-note b { color: var(--ink2); font-weight: 600; }
+
+    /* Пиксель-кубы фона (параллакс) */
+    .cubes { position: absolute; inset: 0; pointer-events: none; z-index: 0; }
+    .cube { position: absolute; }
+    .cube::before {
+      content: ''; display: block; width: 14px; height: 14px; background: var(--red);
+      box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.5), inset -4px -4px 0 rgba(0, 0, 0, 0.35), inset 4px 4px 0 rgba(255, 255, 255, 0.22);
+      opacity: 0.85; animation: float 7s ease-in-out infinite;
+    }
+    .cube.gold::before { background: var(--gold); }
+    .cube.ok::before { background: var(--ok); }
+    .cube.small::before { width: 9px; height: 9px; }
+    .cube:nth-child(1)::before { animation-delay: 0s; }
+    .cube:nth-child(2)::before { animation-delay: 1.4s; }
+    .cube:nth-child(3)::before { animation-delay: 2.6s; }
+    .cube:nth-child(4)::before { animation-delay: 0.8s; }
+    .cube:nth-child(5)::before { animation-delay: 2s; }
+    .cube:nth-child(6)::before { animation-delay: 3.2s; }
+    .cube:nth-child(1) { left: 6%; top: 18%; }
+    .cube:nth-child(2) { left: 46%; top: 8%; }
+    .cube:nth-child(3) { left: 88%; top: 22%; }
+    .cube:nth-child(4) { left: 12%; top: 76%; }
+    .cube:nth-child(5) { left: 70%; top: 84%; }
+    .cube:nth-child(6) { left: 94%; top: 62%; }
+    @keyframes float { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-14px) rotate(6deg); } }
+
+    /* Рамка-скриншот «как окно лаунчера» */
+    .shot-frame {
+      background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius);
+      overflow: hidden; box-shadow: var(--hard), 0 24px 60px rgba(0, 0, 0, 0.5);
+    }
+    .shot-bar { display: flex; align-items: center; gap: 6px; padding: 10px 14px; background: var(--panel2); border-bottom: 1px solid var(--line); }
+    .shot-bar i { width: 10px; height: 10px; border-radius: 2px; display: block; }
+    .shot-bar i:nth-child(1) { background: var(--red); }
+    .shot-bar i:nth-child(2) { background: var(--gold); }
+    .shot-bar i:nth-child(3) { background: var(--ok); }
+    .shot-bar span { margin-left: 8px; font-size: 12px; color: var(--ink3); }
+    .shot-frame img { width: 100%; height: auto; }
+    .hero-shot { transform: rotate(0.6deg); transition: transform var(--t); }
+    .hero-shot:hover { transform: rotate(0deg) translateY(-4px); box-shadow: var(--hard), 0 30px 70px rgba(0, 0, 0, 0.55); }
+
+    /* ---------- Слоты фактов ---------- */
+    .slots { padding: 10px 0 8px; }
+    .slots-row { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+    .slot {
+      background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+      padding: 14px 16px; display: flex; align-items: center; gap: 12px;
+      box-shadow: inset 2px 2px 0 rgba(255, 255, 255, 0.03), inset -3px -3px 0 rgba(0, 0, 0, 0.45);
+      transition: transform 0.15s, box-shadow 0.15s, border-color var(--t);
+    }
+    .slot:hover { transform: translateY(-3px); border-color: var(--line2); box-shadow: var(--hard-sm), inset 2px 2px 0 rgba(255, 255, 255, 0.04); }
+    .slot svg { width: 22px; height: 22px; stroke: var(--red2); fill: none; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+    .slot b { display: block; font-size: 15.5px; font-weight: 700; color: var(--ink); }
+    .slot span { display: block; font-size: 12.5px; color: var(--ink3); }
+
+    /* ---------- Секции ---------- */
+    section.block { padding: 68px 0; }
+    .section-head { max-width: 660px; margin-bottom: 30px; }
+    h2 { font-size: clamp(26px, 3.6vw, 36px); font-weight: 800; color: #fff; line-height: 1.15; letter-spacing: -0.4px; margin-bottom: 10px; }
+    .section-head p { color: var(--ink2); }
+
+    /* Карточки возможностей */
+    .cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+    .card {
+      background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius);
+      padding: 20px; display: flex; flex-direction: column; gap: 10px;
+      transition: transform 0.15s, box-shadow 0.15s, border-color var(--t), background var(--t);
+    }
+    .card:hover { transform: translate(-2px, -2px); box-shadow: var(--hard); border-color: var(--line2); background: var(--panel2); }
+    .card-icon {
+      width: 44px; height: 44px; border-radius: 9px; background: var(--panel3);
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: inset 2px 2px 0 rgba(255, 255, 255, 0.04), inset -2px -2px 0 rgba(0, 0, 0, 0.4);
+      transition: transform var(--t) var(--ease-back);
+    }
+    .card:hover .card-icon { transform: scale(1.08) rotate(-3deg); }
+    .card-icon svg { width: 22px; height: 22px; stroke: var(--red2); fill: none; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+    .card-icon.blue svg { stroke: #5bc6f2; }
+    .card h3 { font-size: 17px; font-weight: 700; color: var(--ink); }
+    .card p { font-size: 14.5px; color: var(--ink3); line-height: 1.55; }
+    .cards.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+    /* ---------- Галерея скриншотов ---------- */
+    .shots { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .shot { display: flex; flex-direction: column; gap: 0; }
+    .shot figcaption {
+      padding: 11px 15px; background: var(--panel2); border-top: 1px solid var(--line);
+      font-size: 13.5px; color: var(--ink2); display: flex; justify-content: space-between; align-items: center; gap: 10px;
+    }
+    .shot figcaption span { color: var(--ink4); font-size: 12px; text-transform: uppercase; letter-spacing: 0.6px; }
+
+    /* Строки-фичи со скриншотом */
+    .feature-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 38px; align-items: center; margin-bottom: 58px; }
+    .feature-row:last-child { margin-bottom: 0; }
+    .feature-row.reverse .shot-frame { order: 2; }
+    .feature-row h2 { font-size: clamp(23px, 2.8vw, 30px); }
+    .feature-row p { color: var(--ink2); }
+
+    .ticks { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-top: 14px; }
+    .ticks li, .tick-grid li { position: relative; padding-left: 32px; color: var(--ink2); font-size: 15px; }
+    .ticks li::before, .tick-grid li::before {
+      content: '✓'; position: absolute; left: 0; top: 1px; width: 21px; height: 21px;
+      display: grid; place-items: center; background: var(--panel3); border: 1px solid var(--line2);
+      border-radius: 5px; color: var(--ok); font-size: 12px; line-height: 1; box-shadow: 2px 2px 0 rgba(0,0,0,.4);
+    }
+    .tick-grid { list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 28px; }
+
+    /* ---------- CTA-скачивание ---------- */
+    .cta-panel {
+      background: linear-gradient(180deg, var(--panel2), var(--panel));
+      border: 1px solid var(--line); border-radius: var(--radius);
+      padding: 38px; position: relative; overflow: hidden;
+      box-shadow: inset 2px 2px 0 rgba(255, 255, 255, 0.03);
+    }
+    .cta-panel::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 6px; background: var(--red); }
+    .cta-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr); gap: 30px; align-items: center; }
+    .steps { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .steps li { display: flex; gap: 12px; align-items: baseline; font-size: 15px; color: var(--ink2); }
+    .steps b { font-weight: 700; color: var(--ink); }
+    .step-num {
+      flex-shrink: 0; width: 26px; height: 26px; border-radius: 6px; background: var(--panel3);
+      border: 1px solid var(--line2); color: var(--gold); font-weight: 700; font-size: 14px;
+      display: inline-flex; align-items: center; justify-content: center; box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.45);
+    }
+
+    /* ---------- Telegram-полоса ---------- */
+    .tg-band {
+      display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;
+      background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius);
+      padding: 24px 28px;
+    }
+    .tg-band-info { display: flex; align-items: center; gap: 16px; }
+    .tg-badge {
+      width: 46px; height: 46px; border-radius: 10px; background: #229ed9;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 0 #17638a;
+    }
+    .tg-badge svg { width: 24px; height: 24px; fill: #fff; }
+    .tg-band h3 { font-size: 18px; font-weight: 700; }
+    .tg-band p { font-size: 14px; color: var(--ink3); }
+
+    /* ---------- Блок скачивания ---------- */
+    .dl-card {
+      background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius);
+      padding: 30px; box-shadow: inset 2px 2px 0 rgba(255, 255, 255, 0.03);
+      display: flex; flex-direction: column; gap: 22px;
+    }
+    .dl-card .btn-lg { width: 100%; }
+    .dl-meta { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 0; }
+    .dl-meta > div {
+      background: var(--panel2); border: 1px solid var(--line); border-radius: 9px; padding: 12px 14px;
+      box-shadow: inset 2px 2px 0 rgba(255, 255, 255, 0.03);
+    }
+    .dl-meta dt { font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.8px; color: var(--ink4); margin-bottom: 4px; }
+    .dl-meta dd { margin: 0; font-size: 16px; font-weight: 700; color: var(--ink); }
+    .hash { border: 1px solid var(--line); border-radius: 9px; background: var(--panel2); }
+    .hash summary { cursor: pointer; padding: 12px 16px; font-size: 14px; font-weight: 600; color: var(--ink2); list-style: none; display: flex; align-items: center; gap: 9px; }
+    .hash summary::-webkit-details-marker { display: none; }
+    .hash summary::before { content: '+'; width: 20px; height: 20px; display: grid; place-items: center; background: var(--panel3); border: 1px solid var(--line2); border-radius: 5px; color: var(--gold); font-weight: 700; }
+    .hash[open] summary::before { content: '−'; }
+    .hash-row { display: flex; gap: 10px; align-items: center; padding: 0 16px 14px; flex-wrap: wrap; }
+    .hash-row code { flex: 1; min-width: 240px; word-break: break-all; font-size: 12.5px; }
+
+    .notice {
+      background: var(--panel); border: 1px solid var(--line); border-left: 5px solid var(--gold);
+      border-radius: var(--radius-sm); padding: 18px 20px; color: var(--ink2); font-size: 15px; margin-top: 26px;
+    }
+    .notice b { color: var(--ink); }
+
+    /* ---------- FAQ ---------- */
+    .faq { display: flex; flex-direction: column; gap: 12px; max-width: 860px; }
+    .faq-item { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius-sm); overflow: hidden; transition: border-color var(--t); }
+    .faq-item:hover { border-color: var(--line2); }
+    .faq-item summary { cursor: pointer; list-style: none; padding: 16px 20px; display: flex; align-items: center; gap: 14px; font-size: 16.5px; font-weight: 700; color: var(--ink); }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: '+'; flex-shrink: 0; width: 26px; height: 26px; display: grid; place-items: center;
+      background: var(--panel3); border: 1px solid var(--line2); border-radius: 6px;
+      color: var(--gold); font-weight: 700; box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.4); transition: transform 0.2s var(--ease-back);
+    }
+    .faq-item[open] summary::before { content: '−'; transform: rotate(180deg); }
+    .faq-item[open] { border-color: var(--line2); }
+    .faq-body { padding: 0 20px 18px 60px; color: var(--ink2); font-size: 15px; }
+    .faq-body p + p { margin-top: 10px; }
+
+    /* ---------- Подвал ---------- */
+    .site-footer { border-top: 1px solid var(--line); background: var(--panel); padding: 44px 0 26px; margin-top: 40px; }
+    .footer-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) repeat(2, minmax(0, 1fr)); gap: 30px; margin-bottom: 30px; }
+    .footer-brand { display: flex; flex-direction: column; gap: 10px; max-width: 340px; }
+    .footer-brand .brand { font-size: 17px; }
+    .footer-brand p { font-size: 13.5px; color: var(--ink3); }
+    .site-footer h4 { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: var(--ink4); margin-bottom: 12px; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer-links a { color: var(--ink2); font-size: 14.5px; }
+    .footer-links a:hover { color: var(--ink); }
+    .footer-bottom { border-top: 1px solid var(--line); padding-top: 18px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: 13px; color: var(--ink4); }
+
+    /* ---------- Появление при скролле ---------- */
+    .reveal { opacity: 0; transform: translateY(26px); transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out); transition-delay: var(--d, 0s); }
+    .reveal.in { opacity: 1; transform: none; }
+
+    /* ---------- Адаптивность ---------- */
+    @media (max-width: 1000px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 32px; }
+      .hero { padding-top: 46px; }
+      .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .cards.two { grid-template-columns: 1fr; }
+      .slots-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .cta-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .feature-row { grid-template-columns: 1fr; gap: 24px; margin-bottom: 46px; }
+      .feature-row.reverse .shot-frame { order: 0; }
+      .dl-meta { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .tick-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 760px) {
+      body { font-size: 16px; }
+      .main-nav { display: none; }
+      .main-nav.open { display: flex; flex-direction: column; position: absolute; top: 68px; left: 0; right: 0; background: var(--panel); border-bottom: 1px solid var(--line); padding: 12px 20px 18px; }
+      .burger { display: inline-flex; }
+      .shots { grid-template-columns: 1fr; }
+      .cards { grid-template-columns: 1fr; }
+      section.block { padding: 50px 0; }
+      .cta-panel { padding: 26px 22px; }
+      .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+      .faq-body { padding-left: 20px; }
+      .dl-meta { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 560px) {
+      .header-actions .btn { display: none; }
+      .header-row { gap: 10px; }
+    }
+
+    /* ---------- prefers-reduced-motion ---------- */
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+      .reveal { opacity: 1; transform: none; }
+      .cube { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Перейти к содержанию</a>
+
+  <header class="site-header" id="siteHeader">
+    <div class="wrap header-row">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.png" alt="Noble Launcher" width="34" height="34" data-i18n-alt="brand_logo_alt">
+        <span data-i18n="brand">Noble Launcher</span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Навигация по сайту" data-i18n-aria="nav_aria">
+        <a href="index.html" data-i18n="nav_home">Главная</a>
+        <a href="features.html" data-i18n="nav_features">Возможности</a>
+        <a href="download.html" data-i18n="nav_download">Скачать</a>
+        <a href="about.html" data-i18n="nav_about">О лаунчере</a>
+        <a href="faq.html" aria-current="page" data-i18n="nav_faq">FAQ</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- task12: переключатель языка (выбор сохраняется в localStorage) -->
+        <div class="lang-switch" role="group" aria-label="RU / EN" data-i18n-aria="language">
+          <button type="button" id="langRu" aria-pressed="true" lang="ru">RU</button>
+          <button type="button" id="langEn" aria-pressed="false" lang="en">EN</button>
+        </div>
+        <a class="tg-link" href="https://t.me/noblelauncher" target="_blank" rel="noopener noreferrer" aria-label="Telegram" title="Telegram" data-i18n-aria="tg_aria">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.64 6.8-1.55 7.3c-.12.53-.43.66-.87.41l-2.4-1.77-1.16 1.12c-.13.13-.24.24-.48.24l.17-2.44 4.44-4.01c.19-.17-.04-.27-.3-.1l-5.49 3.46-2.36-.74c-.51-.16-.52-.51.11-.76l9.23-3.56c.43-.16.8.1.66.85z"/></svg>
+        </a>
+        <a class="btn btn-red btn-sm" href="https://github.com/DevvTorn/NobleLauncher/releases/download/Version-2/NobleLauncherSetup-2.9.0.exe" data-i18n="download_short">Скачать</a>
+        <button class="burger" id="burger" aria-label="Меню" aria-expanded="false" aria-controls="mainNav" type="button" data-i18n-aria="menu_aria">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="hero" style="padding: 52px 0 20px;">
+      <div class="wrap">
+        <p class="eyebrow reveal">FAQ</p>
+        <h1 class="reveal" style="--d:.06s; font-size: clamp(30px, 4.4vw, 44px);" data-i18n="h1">Частые вопросы</h1>
+        <p class="lead reveal" style="--d:.12s" data-i18n="lead">Короткие ответы на то, что спрашивают чаще всего.</p>
+      </div>
+    </section>
+
+    <section class="block" style="padding-top: 28px;">
+      <div class="wrap">
+        <div class="faq" id="faqList"></div>
+
+    <section class="block" style="padding-top: 0;">
+      <div class="wrap">
+        <div class="tg-band reveal">
+          <div class="tg-band-info">
+            <div class="tg-badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.64 6.8-1.55 7.3c-.12.53-.43.66-.87.41l-2.4-1.77-1.16 1.12c-.13.13-.24.24-.48.24l.17-2.44 4.44-4.01c.19-.17-.04-.27-.3-.1l-5.49 3.46-2.36-.74c-.51-.16-.52-.51.11-.76l9.23-3.56c.43-.16.8.1.66.85z"/></svg></div>
+            <div>
+              <h3 data-i18n="tg_title">Следите за обновлениями</h3>
+              <p data-i18n="tg_text">Анонсы версий, исправления и новости — в Telegram-канале.</p>
+            </div>
+          </div>
+          <a class="btn" href="https://t.me/noblelauncher" target="_blank" rel="noopener noreferrer" data-i18n="tg_follow">Подписаться на @noblelauncher</a>
+        </div>
+      </div>
+    </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html">
+            <img src="assets/logo.png" alt="" width="34" height="34">
+            <span data-i18n="brand">Noble Launcher</span>
+          </a>
+          <p data-i18n="footer_tagline">Бесплатный и удобный лаунчер Minecraft на ПК: Ely.by и офлайн-аккаунты, сборки, моды Modrinth, свои фоны, выбор шрифта и обратимая оптимизация игры.</p>
+        </div>
+        <div>
+          <h4 data-i18n="footer_pages">Страницы</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" data-i18n="nav_home">Главная</a></li>
+            <li><a href="features.html" data-i18n="nav_features">Возможности</a></li>
+            <li><a href="download.html" data-i18n="nav_download">Скачать</a></li>
+            <li><a href="about.html" data-i18n="nav_about">О лаунчере</a></li>
+            <li><a href="faq.html" data-i18n="nav_faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 data-i18n="footer_community">Сообщество</h4>
+          <ul class="footer-links">
+            <li><a href="https://t.me/noblelauncher" target="_blank" rel="noopener noreferrer" data-i18n="tg_follow">Подписаться на @noblelauncher</a></li>
+            <li><a href="download.html" data-i18n="footer_download">Установить лаунчер</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Noble Launcher</span>
+        <span data-i18n="footer_disclaimer">Не связан с Mojang Studios и Microsoft. Minecraft — торговая марка Mojang Studios.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* ================= i18n (task12) =================
+       Словарь RU/EN + t(key) + data-i18n атрибуты.
+       Язык: ?lang= в адресе → localStorage → navigator.languages → ru. */
+    var I18N = {
+      ru: {
+            "new28_eyebrow": "Версия 2.9.0",
+            "new28_h2": "Что нового в 2.9.0",
+            "new28_text": "Полная миграция на C++/Qt Quick, новый красно-чёрный дизайн, 3D-скин Ely.by, отключаемая консоль и память ниже 200 МБ.",
+            "new28_friends_t": "C++ / Qt Quick без Electron",
+            "new28_friends_d": "Один нативный процесс вместо Chromium и Node.js: быстрее старт, меньше ОЗУ и CPU.",
+            "new28_noble_t": "Новый дизайн",
+            "new28_noble_d": "Красно-чёрная тема, акценты, плотность UI, live-анимации и поддержка reduced motion.",
+            "new28_profile_t": "Скин Ely.by и очки",
+            "new28_profile_d": "Актуальный скин Ely.by в 3D на главной, достижения без дублей и прогресс до следующего уровня.",
+            "new28_memory_t": "Отключаемая консоль",
+            "new28_memory_d": "Закрытие консоли освобождает модель и буфер, приём логов прекращается; память ~80–95 МБ вместо ~250 МБ.",
+            "shot_profile_t": "Мой профиль",
+            "shot_profile_k": "Достижения, скин и время",
+            "shot_profile_alt": "Профиль и скин Noble Launcher 2.9.0",
+            "shot_achievements_t": "Достижения",
+            "shot_achievements_k": "62 достижения и уровни",
+            "shot_achievements_alt": "Достижения и уровни Noble Launcher 2.9.0",
+            "shot_builds-noble_t": "Сборки от Noble",
+            "shot_builds-noble_k": "Кураторские сборки (Beta)",
+            "shot_builds-noble_alt": "Раздел сборок Noble Launcher 2.9.0",
+            "shot_friends_t": "Друзья через Steam (Beta)",
+            "shot_friends_k": "e4steam и статус Steam",
+            "shot_friends_alt": "Настройка друзей через Steam в Noble Launcher",
+            "brand": "Noble Launcher",
+            "nav_home": "Главная",
+            "nav_features": "Возможности",
+            "nav_download": "Скачать",
+            "nav_about": "О лаунчере",
+            "nav_faq": "FAQ",
+            "download_short": "Скачать",
+            "tg_aria": "Telegram-канал Noble Launcher",
+            "tg_follow": "Подписаться на @noblelauncher",
+            "tg_title": "Следите за обновлениями",
+            "tg_text": "Спросите в Telegram-канале — читаем и отвечаем.",
+            "footer_tagline": "Бесплатный и удобный лаунчер Minecraft на ПК: Ely.by и офлайн-аккаунты, сборки, моды Modrinth, свои фоны, выбор шрифта и обратимая оптимизация игры.",
+            "footer_pages": "Страницы",
+            "footer_community": "Сообщество",
+            "footer_download": "Установить лаунчер",
+            "footer_disclaimer": "Не связан с Mojang Studios и Microsoft. Minecraft — торговая марка Mojang Studios.",
+            "language": "Язык сайта",
+            "download_installer": "Скачать установщик",
+            "download_more": "Инструкция по установке",
+            "win_spec": "Windows 10/11 x64",
+            "file_note": "Официальная сборка из GitHub Releases · версия {v}",
+            "cta_ready": "Установите и играйте",
+            "cta_ready_text": "Установщик сам создаст ярлык «NobleLauncher», а папку установки можно выбрать на любом диске.",
+            "step1_t": "Скачайте установщик.",
+            "step1_d": "Windows может показать предупреждение SmartScreen — «Подробнее» → «Выполнить в любом случае».",
+            "step2_t": "Выберите диск.",
+            "step2_d": "На странице каталога укажите любую папку — например, D:\\NobleLauncher.",
+            "step3_t": "Играйте.",
+            "step3_d": "Выберите аккаунт Ely.by или офлайн-ник и запускайте сборку.",
+            "meta_title": "Частые вопросы — Noble Launcher (бесплатный лаунчер Minecraft)",
+            "meta_description": "Ответы на частые вопросы о Noble Launcher: аккаунты Ely.by, предупреждение SmartScreen, безопасность оптимизации, выбор шрифта, версии и загрузчики, перенос сборок на другой диск.",
+            "og_title": "Частые вопросы — Noble Launcher",
+            "og_description": "Аккаунты, SmartScreen, оптимизация, шрифты, загрузчики и перенос сборок — короткие ответы.",
+            "h1": "Частые вопросы",
+            "lead": "Короткие ответы на то, что спрашивают чаще всего.",
+            "items": [
+                  [
+                        "Нужна ли регистрация Microsoft?",
+                        "Нет. Вход выполняется через Ely.by — по логину и паролю или через браузер. Для игры без сети можно создать офлайн-профиль: достаточно ника."
+                  ],
+                  [
+                        "Windows показывает предупреждение при установке. Это опасно?",
+                        "Нет. Установщик не подписан платным сертификатом, поэтому SmartScreen перестраховывается. Нажмите «Подробнее» → «Выполнить в любом случае». Файл можно сверить с SHA-256 на странице «Скачать»."
+                  ],
+                  [
+                        "Оптимизация игры безопасна? Что именно она меняет?",
+                        "Меняются только пользовательские настройки: приоритет GPU для javaw.exe, игровой режим Windows, отключение fullscreen optimizations, план питания и приоритет процесса игры. Перед применением показывается список, сохраняется точка отката, а кнопка «Откат» возвращает прежние значения. Антивирус, Windows Update и службы не затрагиваются."
+                  ],
+                  [
+                        "Можно ли выбрать шрифт интерфейса?",
+                        "Да: встроенный Minecraft-шрифт, системный или свой файл (.ttf, .otf, .woff, .woff2). Предпросмотр — в реальном времени, выбор сохраняется."
+                  ],
+                  [
+                        "Какие версии Minecraft и загрузчики поддерживаются?",
+                        "Vanilla, Forge, Fabric, Quilt и NeoForge — под актуальные версии игры. Подходящая Java скачивается автоматически, но можно указать и свою."
+                  ],
+                  [
+                        "Где хранятся сборки и можно ли перенести их на другой диск?",
+                        "В папке данных лаунчера. В настройках есть раздел «Диск и папки»: выберите любой диск — данные перенесутся с прогрессом, старые файлы удалятся только после успешного копирования."
+                  ],
+                  [
+                        "Откуда берутся моды?",
+                        "Из каталога Modrinth: поиск модов, ресурспаков и шейдеров, установка с зависимостями, поддержка модпаков .mrpack и установка по прямой ссылке. Можно ставить пачкой через очередь загрузок."
+                  ],
+                  [
+                        "Как узнавать об обновлениях?",
+                        "Установленная версия обновляется сама, а анонсы выходят в Telegram-канале @noblelauncher."
+                  ]
+            ],
+            "tg_h2": "Не нашли ответ?",
+            "nav_aria": "Навигация по сайту",
+            "menu_aria": "Открыть меню",
+            "brand_logo_alt": "Логотип Noble Launcher",
+            "og_image_alt": "Noble Launcher 2.9.0",
+            "twitter_title": "Частые вопросы — Noble Launcher",
+            "twitter_description": "Аккаунты, SmartScreen, оптимизация, шрифты и загрузчики."
+      },
+      en: {
+            "new28_eyebrow": "Version 2.9.0",
+            "new28_h2": "What is new in 2.9.0",
+            "new28_text": "Full migration to C++/Qt Quick, a new red-black design, Ely.by skin, a disposable console and memory below 200 MB.",
+            "new28_friends_t": "C++ / Qt Quick without Electron",
+            "new28_friends_d": "One native process instead of Chromium and Node.js: faster startup, less RAM and CPU.",
+            "new28_noble_t": "New design",
+            "new28_noble_d": "Red-black theme, accents, UI density, live animations and reduced motion support.",
+            "new28_profile_t": "Ely.by skin and points",
+            "new28_profile_d": "The actual Ely.by skin in 3D on the home screen, duplicate-free achievements and level progress.",
+            "new28_memory_t": "Disposable console",
+            "new28_memory_d": "Closing the console frees the model and buffer and stops log receiving; memory ~80–95 MB instead of ~250 MB.",
+            "shot_profile_t": "My profile",
+            "shot_profile_k": "Achievements, skin and time",
+            "shot_profile_alt": "Noble Launcher profile: level, points and skin upload",
+            "shot_achievements_t": "Achievements",
+            "shot_achievements_k": "62 achievements and levels",
+            "shot_achievements_alt": "Noble Launcher achievements grid with levels",
+            "shot_builds-noble_t": "Noble builds",
+            "shot_builds-noble_k": "Curated builds (Beta)",
+            "shot_builds-noble_alt": "Noble curated builds section with cards",
+            "shot_friends_t": "Friends via Steam (Beta)",
+            "shot_friends_k": "e4steam and Steam status",
+            "shot_friends_alt": "Friends via Steam settings in Noble Launcher",
+            "brand": "Noble Launcher",
+            "nav_home": "Home",
+            "nav_features": "Features",
+            "nav_download": "Download",
+            "nav_about": "About",
+            "nav_faq": "FAQ",
+            "download_short": "Download",
+            "tg_aria": "Noble Launcher Telegram channel",
+            "tg_follow": "Follow @noblelauncher",
+            "tg_title": "Follow the updates",
+            "tg_text": "Ask in the Telegram channel — we read and reply.",
+            "footer_tagline": "Free and convenient Minecraft launcher for PC: Ely.by and offline accounts, builds, Modrinth mods, custom backgrounds, font choice and reversible game optimization.",
+            "footer_pages": "Pages",
+            "footer_community": "Community",
+            "footer_download": "Install the launcher",
+            "footer_disclaimer": "Not affiliated with Mojang Studios or Microsoft. Minecraft is a trademark of Mojang Studios.",
+            "language": "Site language",
+            "download_installer": "Download installer",
+            "download_more": "Installation guide",
+            "win_spec": "Windows 10/11 x64",
+            "file_note": "Official build from GitHub Releases · version {v}",
+            "cta_ready": "Install and play",
+            "cta_ready_text": "The installer creates the “NobleLauncher” shortcut; the install folder can be on any drive.",
+            "step1_t": "Download the installer.",
+            "step1_d": "Windows may show a SmartScreen warning — “More info” → “Run anyway”.",
+            "step2_t": "Pick a drive.",
+            "step2_d": "Choose any folder in the wizard — e.g. D:\\NobleLauncher.",
+            "step3_t": "Play.",
+            "step3_d": "Sign in with Ely.by or create an offline profile and launch your build.",
+            "meta_title": "FAQ — Noble Launcher (free Minecraft launcher for PC)",
+            "meta_description": "Frequently asked questions about Noble Launcher: Ely.by accounts, SmartScreen warning, optimization safety, font choice, versions and loaders, moving builds to another drive.",
+            "og_title": "FAQ — Noble Launcher",
+            "og_description": "Accounts, SmartScreen, optimization, fonts, loaders and moving builds — short answers.",
+            "h1": "Frequently asked questions",
+            "lead": "Short answers to the most common questions.",
+            "items": [
+                  [
+                        "Do I need Microsoft registration?",
+                        "No. Sign-in goes through Ely.by — password or browser. For offline play, create an offline profile with just a nickname."
+                  ],
+                  [
+                        "Windows warns me during installation. Is it dangerous?",
+                        "No. The installer is not signed with a paid certificate, so SmartScreen is cautious. Click “More info” → “Run anyway”. Verify the SHA-256 on the Download page."
+                  ],
+                  [
+                        "Is game optimization safe? What exactly does it change?",
+                        "Only per-user settings: GPU preference for javaw.exe, Windows Game Mode, fullscreen optimizations off, power plan and game process priority. You see the list before applying, a restore point is saved, and the Rollback button reverts everything. Antivirus, Windows Update and services are untouched."
+                  ],
+                  [
+                        "Can I choose the interface font?",
+                        "Yes: built-in Minecraft font, system font or your own file (.ttf, .otf, .woff, .woff2). Live preview; the choice is saved."
+                  ],
+                  [
+                        "Which Minecraft versions and loaders are supported?",
+                        "Vanilla, Forge, Fabric, Quilt and NeoForge for current game versions. The right Java is downloaded automatically, and a manual path is possible."
+                  ],
+                  [
+                        "Where are builds stored, and can I move them to another drive?",
+                        "In the launcher data folder. Settings → “Disk and folders”: pick any drive — data moves with progress, old files are removed only after a successful copy."
+                  ],
+                  [
+                        "Where do mods come from?",
+                        "From Modrinth: mods, resource packs and shaders, installs with dependencies, .mrpack modpacks and direct links. You can queue several at once."
+                  ],
+                  [
+                        "How do I follow updates?",
+                        "The installed version updates itself; announcements are posted in the @noblelauncher Telegram channel."
+                  ]
+            ],
+            "tg_h2": "Did not find an answer?",
+            "nav_aria": "Site navigation",
+            "menu_aria": "Open menu",
+            "brand_logo_alt": "Noble Launcher logo",
+            "og_image_alt": "Noble Launcher 2.9.0",
+            "twitter_title": "FAQ — Noble Launcher",
+            "twitter_description": "Accounts, SmartScreen, optimization, fonts and loaders."
+      }
+    }
+    var lang = 'ru'
+    function t(key) {
+      return (I18N[lang] && I18N[lang][key]) || I18N.ru[key] || key
+    }
+
+    function detectLang() {
+      var params = new URLSearchParams(location.search)
+      var param = (params.get('lang') || '').toLowerCase()
+      if (param === 'ru' || param === 'en') return param
+      try {
+        var stored = localStorage.getItem('noble-lang')
+        if (stored === 'ru' || stored === 'en') return stored
+      } catch (e) { /* приватный режим */ }
+      var list = (navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || '']).map(function (l) { return String(l).toLowerCase() })
+      for (var i = 0; i < list.length; i++) if (list[i].indexOf('ru') === 0) return 'ru'
+      for (var j = 0; j < list.length; j++) if (list[j].indexOf('en') === 0) return 'en'
+      return 'ru'
+    }
+
+    function applyLang(next, persist) {
+      lang = next
+      document.documentElement.lang = next
+      if (persist !== false) {
+        try { localStorage.setItem('noble-lang', next) } catch (e) { /* ignore */ }
+      }
+      document.querySelectorAll('[data-i18n]').forEach(function (el) { el.textContent = t(el.getAttribute('data-i18n')) })
+      document.querySelectorAll('[data-i18n-alt]').forEach(function (el) { el.setAttribute('alt', t(el.getAttribute('data-i18n-alt'))) })
+      document.querySelectorAll('[data-i18n-aria]').forEach(function (el) { el.setAttribute('aria-label', t(el.getAttribute('data-i18n-aria'))) })
+      // meta-теги: title/description/OG/Twitter — переключаются вместе с языком
+      document.querySelectorAll('[data-i18n-meta]').forEach(function (el) {
+        var value = t(el.getAttribute('data-i18n-meta'))
+        if (el.tagName === 'TITLE') el.textContent = value
+        else el.setAttribute('content', value)
+      })
+      document.querySelectorAll('.lang-switch button').forEach(function (btn) {
+        btn.setAttribute('aria-pressed', String(btn.dataset.lang === next))
+      })
+    }
+
+    document.getElementById('langRu').addEventListener('click', function () { applyLang('ru') })
+    document.getElementById('langEn').addEventListener('click', function () { applyLang('en') })
+    // Применяем язык как можно раньше (скрипт в конце body — разметка уже готова)
+    applyLang(detectLang(), false)
+
+    /* ---------------- Общий скрипт страницы ---------------- */
+    document.querySelectorAll('[data-year]').forEach(function (el) { el.textContent = String(new Date().getFullYear()) })
+
+    var header = document.getElementById('siteHeader')
+    window.addEventListener('scroll', function () { header.classList.toggle('scrolled', window.scrollY > 8) }, { passive: true })
+
+    var burger = document.getElementById('burger')
+    var nav = document.getElementById('mainNav')
+    burger.addEventListener('click', function () {
+      var open = nav.classList.toggle('open')
+      burger.setAttribute('aria-expanded', String(open))
+    })
+    nav.addEventListener('click', function (event) { if (event.target.tagName === 'A') nav.classList.remove('open') })
+
+    var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    var items = document.querySelectorAll('.reveal')
+    if (reduced || !('IntersectionObserver' in window)) {
+      items.forEach(function (el) { el.classList.add('in') })
+    } else {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return
+          entry.target.classList.add('in')
+          io.unobserve(entry.target)
+        })
+      }, { threshold: 0.12, rootMargin: '0px 0px -34px' })
+      items.forEach(function (el) { io.observe(el) })
+    }
+
+    var hero = document.querySelector('.hero')
+    if (!reduced && hero) {
+      var cubes = Array.prototype.slice.call(hero.querySelectorAll('.cube'))
+      var raf = 0
+      hero.addEventListener('mousemove', function (event) {
+        if (raf) return
+        raf = requestAnimationFrame(function () {
+          raf = 0
+          var rect = hero.getBoundingClientRect()
+          var mx = (event.clientX - rect.left) / rect.width - 0.5
+          var my = (event.clientY - rect.top) / rect.height - 0.5
+          cubes.forEach(function (cube) {
+            var depth = Number(cube.dataset.depth || 12)
+            cube.style.transform = 'translate(' + (mx * depth) + 'px,' + (my * depth) + 'px)'
+          })
+        })
+      })
+      hero.addEventListener('mouseleave', function () {
+        cubes.forEach(function (cube) { cube.style.transform = '' })
+      })
+    }
+  </script>
+
+  <script>
+    /* Списки, собранные из словаря i18n (RU/EN) */
+    var LISTS = {
+        "ru": {
+            "brand": "Noble Launcher",
+            "nav_home": "Главная",
+            "nav_features": "Возможности",
+            "nav_download": "Скачать",
+            "nav_about": "О лаунчере",
+            "nav_faq": "FAQ",
+            "download_short": "Скачать",
+            "tg_aria": "Telegram-канал Noble Launcher",
+            "tg_follow": "Подписаться на @noblelauncher",
+            "tg_title": "Следите за обновлениями",
+            "tg_text": "Спросите в Telegram-канале — читаем и отвечаем.",
+            "footer_tagline": "Бесплатный и удобный лаунчер Minecraft на ПК: Ely.by и офлайн-аккаунты, сборки, моды Modrinth, свои фоны, выбор шрифта и обратимая оптимизация игры.",
+            "footer_pages": "Страницы",
+            "footer_community": "Сообщество",
+            "footer_download": "Установить лаунчер",
+            "footer_disclaimer": "Не связан с Mojang Studios и Microsoft. Minecraft — торговая марка Mojang Studios.",
+            "language": "Язык сайта",
+            "download_installer": "Скачать установщик",
+            "download_more": "Инструкция по установке",
+            "win_spec": "Windows 10/11 x64",
+            "file_note": "Официальная сборка из GitHub Releases · версия {v}",
+            "cta_ready": "Установите и играйте",
+            "cta_ready_text": "Установщик сам создаст ярлык «NobleLauncher», а папку установки можно выбрать на любом диске.",
+            "step1_t": "Скачайте установщик.",
+            "step1_d": "Windows может показать предупреждение SmartScreen — «Подробнее» → «Выполнить в любом случае».",
+            "step2_t": "Выберите диск.",
+            "step2_d": "На странице каталога укажите любую папку — например, D:\\NobleLauncher.",
+            "step3_t": "Играйте.",
+            "step3_d": "Выберите аккаунт Ely.by или офлайн-ник и запускайте сборку.",
+            "meta_title": "Частые вопросы — Noble Launcher (бесплатный лаунчер Minecraft)",
+            "meta_description": "Ответы на частые вопросы о Noble Launcher: аккаунты Ely.by, предупреждение SmartScreen, безопасность оптимизации, выбор шрифта, версии и загрузчики, перенос сборок на другой диск.",
+            "og_title": "Частые вопросы — Noble Launcher",
+            "og_description": "Аккаунты, SmartScreen, оптимизация, шрифты, загрузчики и перенос сборок — короткие ответы.",
+            "h1": "Частые вопросы",
+            "lead": "Короткие ответы на то, что спрашивают чаще всего.",
+            "items": [
+                [
+                    "Нужна ли регистрация Microsoft?",
+                    "Нет. Вход выполняется через Ely.by — по логину и паролю или через браузер. Для игры без сети можно создать офлайн-профиль: достаточно ника."
+                ],
+                [
+                    "Windows показывает предупреждение при установке. Это опасно?",
+                    "Нет. Установщик не подписан платным сертификатом, поэтому SmartScreen перестраховывается. Нажмите «Подробнее» → «Выполнить в любом случае». Файл можно сверить с SHA-256 на странице «Скачать»."
+                ],
+                [
+                    "Оптимизация игры безопасна? Что именно она меняет?",
+                    "Меняются только пользовательские настройки: приоритет GPU для javaw.exe, игровой режим Windows, отключение fullscreen optimizations, план питания и приоритет процесса игры. Перед применением показывается список, сохраняется точка отката, а кнопка «Откат» возвращает прежние значения. Антивирус, Windows Update и службы не затрагиваются."
+                ],
+                [
+                    "Можно ли выбрать шрифт интерфейса?",
+                    "Да: встроенный Minecraft-шрифт, системный или свой файл (.ttf, .otf, .woff, .woff2). Предпросмотр — в реальном времени, выбор сохраняется."
+                ],
+                [
+                    "Какие версии Minecraft и загрузчики поддерживаются?",
+                    "Vanilla, Forge, Fabric, Quilt и NeoForge — под актуальные версии игры. Подходящая Java скачивается автоматически, но можно указать и свою."
+                ],
+                [
+                    "Где хранятся сборки и можно ли перенести их на другой диск?",
+                    "В папке данных лаунчера. В настройках есть раздел «Диск и папки»: выберите любой диск — данные перенесутся с прогрессом, старые файлы удалятся только после успешного копирования."
+                ],
+                [
+                    "Откуда берутся моды?",
+                    "Из каталога Modrinth: поиск модов, ресурспаков и шейдеров, установка с зависимостями, поддержка модпаков .mrpack и установка по прямой ссылке. Можно ставить пачкой через очередь загрузок."
+                ],
+                [
+                    "Как узнавать об обновлениях?",
+                    "Установленная версия обновляется сама, а анонсы выходят в Telegram-канале @noblelauncher."
+                ]
+            ],
+            "tg_h2": "Не нашли ответ?",
+            "nav_aria": "Навигация по сайту",
+            "menu_aria": "Открыть меню",
+            "brand_logo_alt": "Логотип Noble Launcher",
+            "og_image_alt": "Noble Launcher 2.9.0",
+            "twitter_title": "Частые вопросы — Noble Launcher",
+            "twitter_description": "Аккаунты, SmartScreen, оптимизация, шрифты и загрузчики."
+        },
+        "en": {
+            "brand": "Noble Launcher",
+            "nav_home": "Home",
+            "nav_features": "Features",
+            "nav_download": "Download",
+            "nav_about": "About",
+            "nav_faq": "FAQ",
+            "download_short": "Download",
+            "tg_aria": "Noble Launcher Telegram channel",
+            "tg_follow": "Follow @noblelauncher",
+            "tg_title": "Follow the updates",
+            "tg_text": "Ask in the Telegram channel — we read and reply.",
+            "footer_tagline": "Free and convenient Minecraft launcher for PC: Ely.by and offline accounts, builds, Modrinth mods, custom backgrounds, font choice and reversible game optimization.",
+            "footer_pages": "Pages",
+            "footer_community": "Community",
+            "footer_download": "Install the launcher",
+            "footer_disclaimer": "Not affiliated with Mojang Studios or Microsoft. Minecraft is a trademark of Mojang Studios.",
+            "language": "Site language",
+            "download_installer": "Download installer",
+            "download_more": "Installation guide",
+            "win_spec": "Windows 10/11 x64",
+            "file_note": "Official build from GitHub Releases · version {v}",
+            "cta_ready": "Install and play",
+            "cta_ready_text": "The installer creates the “NobleLauncher” shortcut; the install folder can be on any drive.",
+            "step1_t": "Download the installer.",
+            "step1_d": "Windows may show a SmartScreen warning — “More info” → “Run anyway”.",
+            "step2_t": "Pick a drive.",
+            "step2_d": "Choose any folder in the wizard — e.g. D:\\NobleLauncher.",
+            "step3_t": "Play.",
+            "step3_d": "Sign in with Ely.by or create an offline profile and launch your build.",
+            "meta_title": "FAQ — Noble Launcher (free Minecraft launcher for PC)",
+            "meta_description": "Frequently asked questions about Noble Launcher: Ely.by accounts, SmartScreen warning, optimization safety, font choice, versions and loaders, moving builds to another drive.",
+            "og_title": "FAQ — Noble Launcher",
+            "og_description": "Accounts, SmartScreen, optimization, fonts, loaders and moving builds — short answers.",
+            "h1": "Frequently asked questions",
+            "lead": "Short answers to the most common questions.",
+            "items": [
+                [
+                    "Do I need Microsoft registration?",
+                    "No. Sign-in goes through Ely.by — password or browser. For offline play, create an offline profile with just a nickname."
+                ],
+                [
+                    "Windows warns me during installation. Is it dangerous?",
+                    "No. The installer is not signed with a paid certificate, so SmartScreen is cautious. Click “More info” → “Run anyway”. Verify the SHA-256 on the Download page."
+                ],
+                [
+                    "Is game optimization safe? What exactly does it change?",
+                    "Only per-user settings: GPU preference for javaw.exe, Windows Game Mode, fullscreen optimizations off, power plan and game process priority. You see the list before applying, a restore point is saved, and the Rollback button reverts everything. Antivirus, Windows Update and services are untouched."
+                ],
+                [
+                    "Can I choose the interface font?",
+                    "Yes: built-in Minecraft font, system font or your own file (.ttf, .otf, .woff, .woff2). Live preview; the choice is saved."
+                ],
+                [
+                    "Which Minecraft versions and loaders are supported?",
+                    "Vanilla, Forge, Fabric, Quilt and NeoForge for current game versions. The right Java is downloaded automatically, and a manual path is possible."
+                ],
+                [
+                    "Where are builds stored, and can I move them to another drive?",
+                    "In the launcher data folder. Settings → “Disk and folders”: pick any drive — data moves with progress, old files are removed only after a successful copy."
+                ],
+                [
+                    "Where do mods come from?",
+                    "From Modrinth: mods, resource packs and shaders, installs with dependencies, .mrpack modpacks and direct links. You can queue several at once."
+                ],
+                [
+                    "How do I follow updates?",
+                    "The installed version updates itself; announcements are posted in the @noblelauncher Telegram channel."
+                ]
+            ],
+            "tg_h2": "Did not find an answer?",
+            "nav_aria": "Site navigation",
+            "menu_aria": "Open menu",
+            "brand_logo_alt": "Noble Launcher logo",
+            "og_image_alt": "Noble Launcher 2.9.0",
+            "twitter_title": "FAQ — Noble Launcher",
+            "twitter_description": "Accounts, SmartScreen, optimization, fonts and loaders."
+        }
+    }
+    function fillLists() {
+      var dict = LISTS[lang] || LISTS.ru
+      var extra = document.getElementById('extraList')
+      if (extra) {
+        extra.innerHTML = ''
+        ;(dict.extra || []).forEach(function (text) {
+          var li = document.createElement('li')
+          li.textContent = text
+          extra.appendChild(li)
+        })
+      }
+      var cards = document.getElementById('aboutCards')
+      if (cards) {
+        cards.innerHTML = ''
+        ;(dict.cards || []).forEach(function (item, index) {
+          var article = document.createElement('article')
+          article.className = 'card reveal in'
+          article.style.setProperty('--d', (index * 0.06).toFixed(2) + 's')
+          var icon = document.createElement('div')
+          icon.className = 'card-icon'
+          icon.innerHTML = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.8 2.6 4.4v4c0 3.2 2.2 5.4 5.4 5.8 3.2-.4 5.4-2.6 5.4-5.8v-4z"/><path d="M5.6 8.1 7.3 9.8l3.1-3.6"/></svg>'
+          var h3 = document.createElement('h3')
+          h3.textContent = item[0]
+          var p = document.createElement('p')
+          p.textContent = item[1]
+          article.appendChild(icon)
+          article.appendChild(h3)
+          article.appendChild(p)
+          cards.appendChild(article)
+        })
+      }
+      var how = document.getElementById('howList')
+      if (how) {
+        how.innerHTML = ''
+        ;(dict.how || []).forEach(function (text) {
+          var li = document.createElement('li')
+          li.textContent = text
+          how.appendChild(li)
+        })
+      }
+      var news = document.getElementById('newsList')
+      if (news) {
+        news.innerHTML = ''
+        ;(dict.news || []).forEach(function (text) {
+          var li = document.createElement('li')
+          li.textContent = text
+          news.appendChild(li)
+        })
+      }
+      var faq = document.getElementById('faqList')
+      if (faq) {
+        faq.innerHTML = ''
+        ;(dict.items || []).forEach(function (item, index) {
+          var details = document.createElement('details')
+          details.className = 'faq-item reveal in'
+          if (index === 0) details.open = true
+          var summary = document.createElement('summary')
+          summary.textContent = item[0]
+          var body = document.createElement('div')
+          body.className = 'faq-body'
+          var p = document.createElement('p')
+          p.textContent = item[1]
+          body.appendChild(p)
+          details.appendChild(summary)
+          details.appendChild(body)
+          faq.appendChild(details)
+        })
+        // Аккордеон: открыт только один ответ
+        faq.querySelectorAll('.faq-item').forEach(function (item) {
+          item.addEventListener('toggle', function () {
+            if (!item.open) return
+            faq.querySelectorAll('.faq-item').forEach(function (other) { if (other !== item) other.open = false })
+          })
+        })
+      }
+    }
+    fillLists()
+    // Перерисовываем списки при смене языка
+    var _applyLang = applyLang
+    applyLang = function (next, persist) { _applyLang(next, persist); fillLists() }
+    // Повторно применяем текущий язык, чтобы заголовки списков перевелись сразу
+    applyLang(lang, false)
+  </script>
+</body>
+</html>

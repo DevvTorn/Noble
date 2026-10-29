@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n-meta="meta_title">Скачать Minecraft бесплатно — Noble Launcher 2.9.0 для Windows</title>
+  <meta name="description" content="Скачать Minecraft бесплатно: Noble Launcher 2.9.0 — бесплатный и удобный лаунчер для Minecraft на ПК. Ely.by и офлайн, сборки, моды Modrinth, 3D-скины и оптимизация игры." data-i18n-meta="meta_description">
+  <meta name="author" content="Noble Launcher">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="canonical" href="https://noblelauncher.ru/">
+  <link rel="alternate" hreflang="ru" href="https://noblelauncher.ru/?lang=ru">
+  <link rel="alternate" hreflang="en" href="https://noblelauncher.ru/?lang=en">
+  <link rel="alternate" hreflang="x-default" href="https://noblelauncher.ru/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Noble Launcher">
+  <meta property="og:url" content="https://noblelauncher.ru/">
+  <meta property="og:title" content="Скачать Minecraft бесплатно — Noble Launcher 2.9.0" data-i18n-meta="og_title">
+  <meta property="og:description" content="Бесплатный и удобный лаунчер на ПК: Ely.by и офлайн, сборки, моды Modrinth, 3D-скины, свои фоны и оптимизация игры." data-i18n-meta="og_description">
+  <meta property="og:image" content="https://noblelauncher.ru/assets/screenshots/main-ru.png">
+  <meta property="og:image:width" content="1264">
+  <meta property="og:image:height" content="761">
+  <meta property="og:image:alt" content="Noble Launcher 2.9.0 — лаунчер Minecraft для Windows" data-i18n-meta="og_image_alt">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Скачать Minecraft бесплатно — Noble Launcher 2.9.0" data-i18n-meta="twitter_title">
+  <meta name="twitter:description" content="Бесплатный и удобный лаунчер на ПК: Ely.by и офлайн, сборки, моды Modrinth, 3D-скины и оптимизация игры." data-i18n-meta="twitter_description">
+  <meta name="twitter:image" content="https://noblelauncher.ru/assets/screenshots/main-ru.png">
+  <meta name="google-site-verification" content="GOOGLE_VERIFICATION_CODE">
+  <meta name="yandex-verification" content="YANDEX_VERIFICATION_CODE">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" sizes="180x180">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Noble Launcher", "description": "Скачать Minecraft бесплатно: Noble Launcher 2.9.0 — бесплатный и удобный лаунчер для Minecraft на ПК. Ely.by и офлайн, сборки, моды Modrinth, 3D-скины и оптимизация игры.", "softwareVersion": "2.9.0", "applicationCategory": "GameApplication", "applicationSubCategory": "Minecraft launcher", "operatingSystem": "Windows 10, Windows 11", "fileSize": "33 MB", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "RUB", "availability": "https://schema.org/InStock"}, "downloadUrl": "https://github.com/DevvTorn/NobleLauncher/releases/download/Version-2/NobleLauncherSetup-2.9.0.exe", "url": "https://noblelauncher.ru/", "screenshot": ["https://noblelauncher.ru/assets/screenshots/main-ru.png", "https://noblelauncher.ru/assets/screenshots/main-en.png", "https://noblelauncher.ru/assets/screenshots/skins-3d.png", "https://noblelauncher.ru/assets/screenshots/mods-queue.png"], "inLanguage": ["ru", "en"], "sameAs": ["https://t.me/noblelauncher"]}</script>
+
+  <style>
+:root{
+  --bg:#0a0a0a;--bg-soft:#101010;--panel:#121212;--panel2:#181818;--panel3:#202020;
+  --line:#2b2b2b;--line2:#424242;--ink:#f5f5f5;--ink2:#c2c2c2;--ink3:#a0a0a0;--ink4:#858585;
+  --red:#d32f2f;--red2:#e53935;--red-dark:#8e1613;--ok:#66bb6a;--warn:#f0b94d;
+  --radius:16px;--radius-sm:11px;--shadow:0 24px 70px rgba(0,0,0,.55);
+  --ease:cubic-bezier(.16,1,.3,1);--t:.25s;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scrollbar-color:var(--line2) var(--bg)}
+body{
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  background:var(--bg);color:var(--ink);font-size:16.5px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+body::before{
+  content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:radial-gradient(rgba(255,255,255,.026) 1px,transparent 1px);
+  background-size:24px 24px;
+}
+img{display:block;max-width:100%}
+a{color:var(--red2);text-decoration:none}
+a:hover{color:#ef5350}
+button{font:inherit}
+::selection{background:var(--red);color:#fff}
+:focus-visible{outline:2px solid var(--red2);outline-offset:3px;border-radius:6px}
+code{font-family:Consolas,"Cascadia Mono",monospace;background:var(--panel3);border:1px solid var(--line);padding:2px 7px;border-radius:6px;font-size:.9em}
+.wrap{width:min(1160px,calc(100% - 40px));margin:0 auto;position:relative;z-index:1}
+.skip{position:absolute;left:-9999px;top:0;z-index:200;background:var(--red);color:#fff;padding:10px 16px;border-radius:0 0 8px 0}
+.skip:focus{left:0;top:0}
+main{position:relative;z-index:1}
+section{position:relative}
+.section{padding:78px 0}
+.section-tight{padding:54px 0}
+.kicker{
+  display:inline-flex;align-items:center;gap:8px;font-size:11.5px;font-weight:800;
+  letter-spacing:1.7px;text-transform:uppercase;color:var(--red2);margin-bottom:12px;
+}
+.kicker::before{content:"";width:9px;height:9px;background:var(--red);box-shadow:2px 2px 0 rgba(0,0,0,.5)}
+h1,h2,h3{line-height:1.12;letter-spacing:-.02em}
+h2{font-size:clamp(27px,3.4vw,42px);font-weight:800;color:#fff;margin-bottom:12px}
+.section-lead{max-width:660px;color:var(--ink2);font-size:17px}
+.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:30px}
+
+/* header */
+.site-header{position:sticky;top:0;z-index:80;background:rgba(10,10,10,.85);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);transition:box-shadow var(--t)}
+.site-header.scrolled{box-shadow:0 18px 45px rgba(0,0,0,.5)}
+.header-row{display:flex;align-items:center;gap:20px;min-height:70px}
+.brand{display:flex;align-items:center;gap:11px;color:var(--ink);font-weight:800;font-size:17.5px;letter-spacing:.2px;flex-shrink:0}
+.brand img{width:36px;height:36px;border-radius:9px;box-shadow:0 3px 0 var(--red-dark)}
+.main-nav{display:flex;align-items:center;gap:3px;margin-left:auto}
+.main-nav a{color:var(--ink2);font-size:14px;font-weight:650;padding:9px 13px;border-radius:8px;transition:color var(--t),background var(--t)}
+.main-nav a:hover{color:#fff;background:var(--panel2)}
+.main-nav a[aria-current="page"]{color:#fff;background:var(--red)}
+.header-actions{display:flex;align-items:center;gap:9px;flex-shrink:0}
+.lang-switch{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--panel)}
+.lang-switch button{padding:7px 10px;border:0;background:transparent;color:var(--ink3);font-size:11px;font-weight:800;letter-spacing:.5px;cursor:pointer;transition:background var(--t),color var(--t)}
+.lang-switch button:hover{color:#fff}
+.lang-switch button[aria-pressed="true"]{background:var(--red);color:#fff}
+.burger{display:none;width:42px;height:42px;align-items:center;justify-content:center;border:1px solid var(--line);border-radius:9px;background:var(--panel);color:var(--ink2);cursor:pointer}
+.burger svg{width:19px;height:19px;fill:currentColor}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 22px;border-radius:10px;border:1px solid var(--line2);background:var(--panel3);color:var(--ink);font-size:15px;font-weight:700;letter-spacing:.1px;cursor:pointer;white-space:nowrap;transition:transform .16s,box-shadow .16s,background var(--t),border-color var(--t),color var(--t)}
+.btn svg{width:18px;height:18px;fill:currentColor;flex-shrink:0;transition:transform var(--t) var(--ease)}
+.btn:hover{transform:translate(-2px,-2px);background:var(--panel2);box-shadow:4px 4px 0 rgba(0,0,0,.5)}
+.btn:hover svg{transform:scale(1.12)}
+.btn:active{transform:translate(1px,1px);box-shadow:none}
+.btn-red{background:var(--red);border-color:var(--red2);color:#fff;box-shadow:0 4px 0 var(--red-dark)}
+.btn-red:hover{background:#b71c1c;border-color:var(--red2);box-shadow:4px 4px 0 rgba(0,0,0,.5),0 12px 30px rgba(211,47,47,.35)}
+.btn-ghost{background:transparent}
+.btn-lg{padding:16px 30px;font-size:16.5px}
+.btn-sm{padding:9px 15px;font-size:13px}
+.btn-block{width:100%}
+
+/* hero */
+.hero{padding:70px 0 54px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);gap:48px;align-items:center;position:relative;z-index:1}
+.hero h1{font-size:clamp(36px,5vw,58px);font-weight:850;color:#fff;margin-bottom:16px}
+.hero h1 .accent{color:var(--red2)}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11.5px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:var(--warn);margin-bottom:15px}
+.eyebrow::before{content:"";width:9px;height:9px;background:var(--warn);box-shadow:2px 2px 0 rgba(0,0,0,.5)}
+.lead{font-size:18.5px;color:var(--ink2);max-width:560px;margin-bottom:12px}
+.sub{font-size:14.5px;color:var(--ink3);max-width:560px;margin-bottom:25px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:15px}
+.file-note{font-size:12.5px;color:var(--ink4)}
+.file-note b{color:var(--ink2);font-weight:600}
+.hero-glow{position:absolute;width:560px;height:560px;border-radius:50%;right:-160px;top:-190px;background:radial-gradient(circle,rgba(211,47,47,.26),transparent 64%);pointer-events:none;filter:blur(8px)}
+.hero-cube{position:absolute;width:14px;height:14px;background:var(--red);box-shadow:4px 4px 0 rgba(0,0,0,.5),inset -4px -4px 0 rgba(0,0,0,.3),inset 4px 4px 0 rgba(255,255,255,.16);opacity:.75;pointer-events:none;transition:transform .12s linear}
+.hero-cube.c2{left:46%;top:10%;background:var(--warn);width:10px;height:10px}
+.hero-cube.c3{left:92%;top:24%;background:var(--ok);width:16px;height:16px}
+.hero-cube.c4{left:8%;top:78%;background:var(--red2);width:9px;height:9px}
+.hero-cube.c5{left:72%;top:88%;background:var(--warn);width:12px;height:12px}
+.hero-cube.c6{left:88%;top:66%;background:var(--red);width:11px;height:11px}
+.shot-frame{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow),5px 5px 0 rgba(0,0,0,.45)}
+.shot-bar{display:flex;align-items:center;gap:6px;padding:10px 14px;background:var(--panel2);border-bottom:1px solid var(--line)}
+.shot-bar i{width:10px;height:10px;border-radius:3px;display:block}
+.shot-bar i:nth-child(1){background:var(--red)}
+.shot-bar i:nth-child(2){background:var(--warn)}
+.shot-bar i:nth-child(3){background:var(--ok)}
+.shot-bar span{margin-left:7px;font-size:11px;color:var(--ink3);font-weight:650}
+.hero-shot{min-width:0}
+.hero-shot img{display:block;width:100%;height:auto;aspect-ratio:1264/761;object-fit:contain}
+.shot-caption{font-size:11.5px;color:var(--ink4);margin-top:9px;text-align:right}
+
+/* start */
+.start-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:34px;align-items:center}
+.steps{display:flex;flex-direction:column;gap:12px}
+.step{display:flex;gap:15px;align-items:flex-start;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:17px 18px;transition:transform var(--t) var(--ease),border-color var(--t),background var(--t)}
+.step:hover{transform:translateX(4px);border-color:rgba(211,47,47,.55);background:var(--panel2)}
+.step-num{width:38px;height:38px;flex-shrink:0;border-radius:10px;display:flex;align-items:center;justify-content:center;background:rgba(211,47,47,.14);border:1px solid rgba(211,47,47,.5);color:var(--red2);font-weight:850;font-size:16px}
+.step h3{font-size:16px;color:#fff;margin-bottom:2px}
+.step p{font-size:13.5px;color:var(--ink3)}
+.start-shot img{width:100%;border-radius:12px;border:1px solid var(--line)}
+.start-shot{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:10px;box-shadow:var(--shadow)}
+
+/* skin */
+.skin-section{padding-top:40px}
+.skin-grid{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:46px;align-items:center}
+.skin-viewer{position:relative;height:470px;border-radius:20px;border:1px solid var(--line);background:radial-gradient(circle at 50% 42%,#1c1c1c 0,#111111 62%,#0b0b0b 100%);overflow:hidden;cursor:grab;touch-action:none;user-select:none;box-shadow:var(--shadow)}
+.skin-viewer:active{cursor:grabbing}
+.skin-viewer::before{content:"";position:absolute;width:330px;height:330px;border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(211,47,47,.16),transparent 66%);pointer-events:none}
+.skin-stage{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;perspective:1050px;pointer-events:none}
+.skin-model{position:relative;width:0;height:0;transform-style:preserve-3d;transform:rotateX(-8deg) rotateY(-20deg);transition:transform .06s linear;will-change:transform}
+.skin-part{position:absolute;left:0;top:0;width:0;height:0;transform-style:preserve-3d}
+.face{position:absolute;left:0;top:0;background-image:url("assets/steve.png");background-size:640px 640px;image-rendering:pixelated;backface-visibility:hidden}
+.skin-shadow{position:absolute;left:50%;bottom:70px;width:170px;height:26px;transform:translateX(-50%);border-radius:50%;background:rgba(0,0,0,.55);filter:blur(9px);pointer-events:none}
+.viewer-hint{position:absolute;left:16px;bottom:14px;font-size:11px;color:var(--ink3);background:rgba(0,0,0,.42);border:1px solid var(--line);border-radius:8px;padding:6px 10px;pointer-events:none}
+.viewer-reset{position:absolute;right:13px;top:13px;border:1px solid var(--line);background:rgba(18,18,18,.9);color:var(--ink2);border-radius:8px;padding:7px 11px;font-size:11px;font-weight:650;cursor:pointer;transition:color var(--t),border-color var(--t),transform var(--t)}
+.viewer-reset:hover{color:#fff;border-color:var(--line2);transform:translateY(-1px)}
+.advantages{display:flex;flex-direction:column;gap:14px;margin-top:24px}
+.adv{display:flex;gap:14px;align-items:flex-start;padding:15px 16px;background:var(--panel);border:1px solid var(--line);border-radius:13px;transition:border-color var(--t),transform var(--t) var(--ease),background var(--t)}
+.adv:hover{border-color:rgba(211,47,47,.5);transform:translateX(4px);background:var(--panel2)}
+.adv-icon{width:38px;height:38px;border-radius:10px;background:rgba(211,47,47,.14);border:1px solid rgba(211,47,47,.42);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--red2)}
+.adv-icon svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.adv h3{font-size:15px;color:#fff;margin-bottom:2px}
+.adv p{font-size:13.5px;color:var(--ink3)}
+
+/* cta */
+.cta-panel{display:flex;align-items:center;justify-content:space-between;gap:28px;padding:38px 40px;border-radius:22px;border:1px solid rgba(211,47,47,.35);background:linear-gradient(120deg,rgba(211,47,47,.15),rgba(18,18,18,.9) 46%);box-shadow:var(--shadow);position:relative;overflow:hidden}
+.cta-panel::after{content:"";position:absolute;width:280px;height:280px;border-radius:50%;right:-80px;top:-120px;background:radial-gradient(circle,rgba(211,47,47,.35),transparent 65%);pointer-events:none}
+.cta-panel h2{font-size:clamp(24px,3vw,34px);margin-bottom:6px}
+.cta-panel p{color:var(--ink2);max-width:560px}
+.cta-actions{display:flex;gap:10px;flex-shrink:0;position:relative;z-index:1}
+
+/* features */
+.feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+.feature{background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:20px;transition:transform var(--t) var(--ease),border-color var(--t),background var(--t)}
+.feature:hover{transform:translateY(-4px);border-color:rgba(211,47,47,.55);background:var(--panel2)}
+.feature-icon{width:42px;height:42px;border-radius:11px;display:flex;align-items:center;justify-content:center;background:rgba(211,47,47,.14);border:1px solid rgba(211,47,47,.4);color:var(--red2);margin-bottom:13px;transition:transform var(--t) var(--ease)}
+.feature:hover .feature-icon{transform:scale(1.08) rotate(-3deg)}
+.feature-icon svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.feature h3{font-size:16px;color:#fff;margin-bottom:4px}
+.feature p{font-size:13px;color:var(--ink3)}
+.innovation{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);gap:30px;align-items:center;margin-top:50px;padding:34px;border-radius:20px;border:1px solid var(--line);background:linear-gradient(120deg,var(--panel2),var(--panel));box-shadow:var(--shadow)}
+.innovation h2{font-size:clamp(25px,3vw,36px)}
+.innovation p{color:var(--ink2);max-width:520px}
+.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.stat{background:rgba(0,0,0,.22);border:1px solid var(--line);border-radius:12px;padding:15px}
+.stat strong{display:block;font-size:23px;color:#fff;line-height:1.1}
+.stat span{font-size:11.5px;color:var(--ink3)}
+
+/* about */
+.timeline{position:relative;margin-top:8px;padding-left:30px}
+.timeline::before{content:"";position:absolute;left:9px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--red),var(--line))}
+.tl{position:relative;padding:0 0 26px 18px}
+.tl::before{content:"";position:absolute;left:-27px;top:5px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--red);box-shadow:0 0 0 4px rgba(211,47,47,.12)}
+.tl-date{font-size:11.5px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:var(--red2);margin-bottom:5px}
+.tl h3{font-size:18px;color:#fff;margin-bottom:3px}
+.tl p{color:var(--ink3);font-size:14px;max-width:620px}
+.about-stats{display:flex;gap:12px;margin-top:8px}
+.about-stat{flex:1;background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:16px}
+.about-stat strong{display:block;font-size:28px;color:#fff;line-height:1.1}
+.about-stat span{font-size:11.5px;color:var(--ink3)}
+.team-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.member{display:flex;align-items:center;gap:17px;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px;transition:transform var(--t) var(--ease),border-color var(--t)}
+.member:hover{transform:translateY(-3px);border-color:rgba(211,47,47,.5)}
+.member img{width:88px;height:88px;border-radius:18px;object-fit:cover;border:2px solid var(--red);background:var(--panel3)}
+.member h3{font-size:18px;color:#fff}
+.member p{font-size:13px;color:var(--ink3)}
+.source-block{margin-top:46px;padding:34px;border-radius:20px;border:1px solid var(--line);background:linear-gradient(130deg,rgba(211,47,47,.12),var(--panel) 55%);box-shadow:var(--shadow)}
+.source-block h2{font-size:clamp(24px,3vw,34px)}
+.source-block p{color:var(--ink2);max-width:700px;margin-bottom:20px}
+.source-actions{display:flex;gap:10px;flex-wrap:wrap}
+
+/* download */
+.download-grid{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);gap:26px;align-items:start}
+.download-card{background:linear-gradient(140deg,rgba(211,47,47,.18),var(--panel) 48%);border:1px solid rgba(211,47,47,.4);border-radius:18px;padding:28px;box-shadow:var(--shadow)}
+.download-card h2{font-size:clamp(26px,3.3vw,38px);margin-bottom:8px}
+.download-card p{color:var(--ink2);margin-bottom:20px}
+.download-meta{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:18px}
+.download-meta div{background:rgba(0,0,0,.22);border:1px solid var(--line);border-radius:9px;padding:9px 11px}
+.download-meta span{display:block;font-size:10px;color:var(--ink4);text-transform:uppercase;letter-spacing:.8px}
+.download-meta strong{font-size:12.5px;color:var(--ink)}
+.download-note{font-size:11.5px;color:var(--ink4);margin-top:12px}
+.install-steps{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:24px}
+.install-steps h2{font-size:20px;margin-bottom:14px}
+.install-step{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
+.install-step:last-child{border-bottom:0;padding-bottom:0}
+.install-step b{width:25px;height:25px;border-radius:50%;background:rgba(211,47,47,.16);border:1px solid rgba(211,47,47,.45);color:var(--red2);display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0}
+.install-step p{font-size:13.5px;color:var(--ink2)}
+.req-card{margin-top:26px;background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:24px}
+.req-card h2{font-size:20px;margin-bottom:12px}
+.req-row{display:flex;gap:10px;align-items:flex-start;padding:8px 0;font-size:13.5px;color:var(--ink2);border-bottom:1px solid var(--line)}
+.req-row:last-child{border-bottom:0}
+.req-row svg{width:17px;height:17px;fill:none;stroke:var(--ok);stroke-width:2;flex-shrink:0;margin-top:3px}
+.safety-box{margin-top:16px;border:1px solid rgba(102,187,106,.28);background:rgba(102,187,106,.06);border-radius:12px;padding:14px 16px}
+.safety-box h3{font-size:14px;color:var(--ok);margin-bottom:3px}
+.safety-box p{font-size:12.5px;color:var(--ink3)}
+
+/* footer */
+.site-footer{border-top:1px solid var(--line);background:var(--bg-soft);margin-top:70px;padding:46px 0 20px;position:relative;z-index:1}
+.footer-grid{display:grid;grid-template-columns:1.5fr .8fr .8fr;gap:32px}
+.footer-brand{display:flex;align-items:center;gap:10px;color:#fff;font-weight:800;margin-bottom:10px}
+.footer-brand img{width:32px;height:32px;border-radius:8px}
+.site-footer p{font-size:13px;color:var(--ink3);max-width:360px}
+.site-footer h3{font-size:11px;text-transform:uppercase;letter-spacing:1.2px;color:var(--ink4);margin-bottom:10px}
+.site-footer a{display:block;color:var(--ink2);font-size:13.5px;padding:4px 0;transition:color var(--t)}
+.site-footer a:hover{color:#fff}
+.footer-bottom{border-top:1px solid var(--line);margin-top:34px;padding-top:16px;display:flex;justify-content:space-between;gap:14px;font-size:11.5px;color:var(--ink4)}
+.footer-version{border:1px solid var(--line);border-radius:6px;padding:2px 7px}
+
+/* reveal + motion */
+.reveal{opacity:1;transform:none}
+.reveal.pre{opacity:0;transform:translateY(20px);transition:opacity .7s var(--ease),transform .7s var(--ease);transition-delay:var(--d,0s)}
+.reveal.pre.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal,.reveal.pre{opacity:1;transform:none}
+  .hero-cube{display:none}
+  .skin-model{transition:none}
+}
+
+/* responsive */
+@media (max-width:1040px){
+  .hero-grid,.skin-grid,.start-grid,.download-grid,.innovation{grid-template-columns:1fr;gap:30px}
+  .feature-grid{grid-template-columns:1fr 1fr}
+  .footer-grid{grid-template-columns:1.3fr 1fr 1fr}
+  .skin-grid .skin-viewer{order:1}
+  .skin-grid .skin-copy{order:2}
+}
+@media (max-width:860px){
+  .main-nav{display:none;position:absolute;left:0;right:0;top:70px;background:var(--panel);border-bottom:1px solid var(--line);padding:12px 20px 18px;flex-direction:column;align-items:stretch;gap:4px;box-shadow:0 24px 40px rgba(0,0,0,.45)}
+  .site-header.nav-open .main-nav{display:flex}
+  .main-nav a{padding:11px 12px}
+  .burger{display:inline-flex}
+  .header-row{gap:12px}
+  .hero{padding-top:48px}
+  .section{padding:56px 0}
+  .feature-grid{grid-template-columns:1fr}
+  .team-grid{grid-template-columns:1fr}
+  .cta-panel{flex-direction:column;align-items:flex-start;padding:28px}
+  .skin-viewer{height:410px}
+}
+@media (max-width:560px){
+  body{font-size:16px}
+  .wrap{width:calc(100% - 30px)}
+  .brand span{font-size:15px}
+  .brand img{width:32px;height:32px}
+  .header-actions{gap:6px}
+  .header-actions .btn-sm{padding:8px 11px;font-size:12px}
+  .lang-switch button{padding:7px 8px}
+  .hero h1{font-size:34px}
+  .lead{font-size:16.5px}
+  .btn-lg{padding:14px 20px;font-size:15px}
+  .hero-actions{flex-direction:column;align-items:stretch}
+  .hero-actions .btn{width:100%}
+  .skin-viewer{height:360px}
+  .viewer-hint{font-size:10px;left:10px;bottom:10px}
+  .stats-grid,.about-stats,.download-meta{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;align-items:flex-start}
+  .cta-actions{flex-direction:column;width:100%}
+  .cta-actions .btn{width:100%}
+}
+
+/* Landing layout */
+.hero-centered{padding:74px 0 46px;text-align:center}
+.hero-centered .eyebrow{margin-left:auto;margin-right:auto}
+.hero-centered h1{max-width:1040px;margin:0 auto 18px;font-size:clamp(38px,6vw,72px);font-weight:850;letter-spacing:-.035em}
+.hero-centered .lead{max-width:760px;margin:0 auto 24px;font-size:clamp(17px,2vw,21px)}
+.hero-centered .hero-actions{justify-content:center;margin-bottom:14px}
+.hero-centered .file-note{text-align:center;margin-bottom:0}
+.hero-showcase{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,.72fr);gap:16px;align-items:stretch;margin-top:42px;text-align:left}
+.hero-showcase .hero-shot{margin:0;min-width:0;display:flex;flex-direction:column}
+.hero-showcase .shot-frame{flex:1;display:flex;flex-direction:column}
+.hero-showcase .shot-frame img{width:100%;height:auto;aspect-ratio:1264/761;object-fit:contain}
+.hero-showcase .shot-caption{margin-top:8px}
+.hero-skin-card{display:flex;flex-direction:column;gap:0;min-width:0;border:1px solid var(--line);border-radius:16px;background:var(--panel);overflow:hidden;box-shadow:var(--shadow)}
+.hero-skin-card .skin-viewer{flex:1;min-height:360px;border:0;border-radius:0;box-shadow:none;height:auto}
+.hero-skin-label{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 13px;border-top:1px solid var(--line);font-size:11px;color:var(--ink3);background:var(--panel2)}
+.hero-skin-label span:first-child{color:var(--ink);font-weight:700}
+.section-head-center{max-width:760px;margin:0 auto 34px;text-align:center}
+.section-head-center .kicker{justify-content:center}
+.section-head-center .section-lead{margin-left:auto;margin-right:auto}
+.steps-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.step-card{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px;transition:transform var(--t) var(--ease),border-color var(--t),background var(--t)}
+.step-card:hover{transform:translateY(-4px);border-color:rgba(211,47,47,.55);background:var(--panel2)}
+.step-icon{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:rgba(211,47,47,.13);border:1px solid rgba(211,47,47,.42);color:var(--red2);margin-bottom:18px}
+.step-icon svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.step-num{position:absolute;right:20px;top:20px;font-size:12px;font-weight:800;color:var(--ink4)}
+.step-card h3{font-size:20px;color:#fff;margin-bottom:6px}
+.step-card p{font-size:14px;color:var(--ink3)}
+.build-section{padding-top:66px}
+.build-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:44px;align-items:center}
+.build-list{list-style:none;display:flex;flex-direction:column;gap:9px;margin:20px 0 26px}
+.build-list li{display:flex;align-items:flex-start;gap:9px;color:var(--ink2);font-size:14px}
+.build-list svg{width:17px;height:17px;flex-shrink:0;margin-top:3px;fill:none;stroke:var(--ok);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.build-media{position:relative;min-height:430px}
+.build-shot{margin:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--panel2);box-shadow:var(--shadow)}
+.build-shot img{display:block;width:100%;height:auto;aspect-ratio:1264/761;object-fit:contain}
+.build-shot.primary{width:92%;margin-left:auto}
+.build-shot.secondary{position:absolute;left:0;bottom:-22px;width:62%;border-color:var(--line2)}
+.adv-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.adv-card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px;transition:transform var(--t) var(--ease),border-color var(--t),background var(--t)}
+.adv-card:hover{transform:translateY(-4px);border-color:rgba(211,47,47,.55);background:var(--panel2)}
+.adv-card .adv-icon{width:46px;height:46px;border-radius:12px;margin-bottom:18px}
+.adv-card .adv-icon svg{width:22px;height:22px}
+.adv-card h3{font-size:19px;color:#fff;margin-bottom:6px}
+.adv-card p{font-size:14px;color:var(--ink3)}
+.community-section{padding-top:58px}
+.community-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.community-card{display:flex;align-items:flex-start;gap:14px;min-height:150px;padding:22px;border:1px solid var(--line);border-radius:16px;background:var(--panel);color:var(--ink);transition:transform var(--t) var(--ease),border-color var(--t),background var(--t)}
+.community-card:hover{transform:translateY(-4px);border-color:rgba(211,47,47,.6);background:var(--panel2);color:var(--ink)}
+.community-icon{width:44px;height:44px;flex-shrink:0;border-radius:12px;display:flex;align-items:center;justify-content:center;background:rgba(211,47,47,.13);border:1px solid rgba(211,47,47,.42);color:var(--red2)}
+.community-icon svg{width:21px;height:21px;fill:currentColor}
+.community-copy{display:flex;flex-direction:column;gap:4px;flex:1}
+.community-copy strong{font-size:16px;color:#fff}
+.community-copy span{font-size:13px;color:var(--ink3)}
+.community-arrow{margin-left:auto;color:var(--red2);font-size:18px;line-height:1}
+@media (max-width:1040px){
+  .hero-showcase,.build-grid{grid-template-columns:1fr}
+  .steps-grid,.adv-grid{grid-template-columns:1fr 1fr}
+  .build-media{min-height:0;display:flex;flex-direction:column;gap:12px}
+  .build-shot.primary,.build-shot.secondary{position:static;width:100%}
+  .community-grid{grid-template-columns:1fr}
+}
+@media (max-width:760px){
+  .hero-centered{padding-top:48px}
+  .hero-centered h1{font-size:clamp(34px,9vw,46px)}
+  .steps-grid,.adv-grid{grid-template-columns:1fr}
+  .hero-skin-card .skin-viewer{min-height:330px}
+}
+@media (max-width:560px){
+  .hero-showcase{margin-top:28px}
+  .hero-centered .hero-actions{flex-direction:column;align-items:stretch}
+  .hero-centered .hero-actions .btn{width:100%}
+  .hero-skin-label{flex-direction:column;align-items:flex-start;gap:2px}
+}
+
+</style>
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="skip">Перейти к содержанию</a>
+<header class="site-header" id="siteHeader">
+  <div class="wrap header-row">
+    <a class="brand" href="index.html">
+      <img src="assets/logo.png" width="36" height="36" alt="Noble Launcher" data-i18n-attr="alt:brand_alt">
+      <span data-i18n="brand">Noble Launcher</span>
+    </a>
+    <nav class="main-nav" id="mainNav" aria-label="Навигация по сайту" data-i18n-attr="aria-label:nav_aria">
+      <a href="index.html" aria-current="page" data-i18n="nav_home">Главная</a>
+      <a href="features.html" data-i18n="nav_features">Возможности</a>
+      <a href="about.html" data-i18n="nav_about">О проекте</a>
+    </nav>
+    <div class="header-actions">
+      <div class="lang-switch" role="group" aria-label="RU / EN" data-i18n-attr="aria-label:language">
+        <button type="button" data-lang-btn="ru" aria-pressed="true" lang="ru">RU</button>
+        <button type="button" data-lang-btn="en" aria-pressed="false" lang="en">EN</button>
+      </div>
+      <a class="btn btn-red btn-sm" href="https://github.com/DevvTorn/NobleLauncher/releases/download/Version-2/NobleLauncherSetup-2.9.0.exe" data-i18n="download">Скачать</a>
+      <button class="burger" id="burger" type="button" aria-label="Меню" data-i18n-attr="aria-label:menu" aria-expanded="false" aria-controls="mainNav">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<main id="main">
+
+<section class="hero hero-centered">
+  <div class="hero-glow" aria-hidden="true"></div>
+  <span class="hero-cube c1" aria-hidden="true"></span>
+  <span class="hero-cube c2" aria-hidden="true"></span>
+  <span class="hero-cube c3" aria-hidden="true"></span>
+  <span class="hero-cube c4" aria-hidden="true"></span>
+  <span class="hero-cube c5" aria-hidden="true"></span>
+  <span class="hero-cube c6" aria-hidden="true"></span>
+  <div class="wrap">
+    <p class="eyebrow reveal" data-i18n="hero_badge">Minecraft · Windows · 2.9.0</p>
+    <h1 class="reveal" style="--d:.05s"><span data-i18n="hero_h1a">Скачать Minecraft</span> <span class="accent" data-i18n="hero_h1b">бесплатно</span> <span data-i18n="hero_h1c">— Noble Launcher</span></h1>
+    <p class="lead reveal" style="--d:.11s" data-i18n="hero_lead">Свой лаунчер. Скачал, вошёл, играешь — Java и сборки ставятся сами.</p>
+    <div class="hero-actions reveal" style="--d:.17s">
+      <a class="btn btn-red btn-lg" href="https://github.com/DevvTorn/NobleLauncher/releases/download/Version-2/NobleLauncherSetup-2.9.0.exe"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11M7 10l5 5 5-5M4 20h16"/></svg><span data-i18n="download">Скачать</span></a>
+      <a class="btn btn-ghost" href="features.html" data-i18n="hero_features">Возможности</a>
+    </div>
+    <p class="file-note reveal" style="--d:.23s" data-i18n="hero_note">Windows 10/11 x64 · установщик 2.9.0 · без прав администратора</p>
+
+    <div class="hero-showcase reveal" style="--d:.16s">
+      <figure class="hero-shot">
+        <div class="shot-frame">
+          <div class="shot-bar"><i></i><i></i><i></i><span data-i18n="shot_hero_key">Запуск и сборки</span></div>
+          <img src="assets/screenshots/main-ru.png" data-i18n-src="shot_hero" fetchpriority="high" alt="Noble Launcher 2.9.0" data-i18n-attr="alt:shot_hero_alt">
+        </div>
+        <figcaption class="shot-caption" data-i18n="shot_hero_key">Запуск и сборки · 2.9.0</figcaption>
+      </figure>
+
+      <div class="hero-skin-card">
+        <div class="skin-viewer reveal" id="skinViewer" tabindex="0" role="group" aria-label="Интерактивная 3D-модель Стива: вращение и масштаб" data-i18n-attr="aria-label:skin_viewer_aria">
+  <div class="skin-stage">
+    <div class="skin-model" id="skinModel">
+<div class="skin-part" style="transform:translate3d(0px,-120px,0)">
+<span class="face" style="width:80px;height:80px;margin-left:-40px;margin-top:-40px;background-position:-80px -80px;transform:translateZ(40px)"></span>
+<span class="face" style="width:80px;height:80px;margin-left:-40px;margin-top:-40px;background-position:-240px -80px;transform:rotateY(180deg) translateZ(40px)"></span>
+<span class="face" style="width:80px;height:80px;margin-left:-40px;margin-top:-40px;background-position:0px -80px;transform:rotateY(90deg) translateZ(40px)"></span>
+<span class="face" style="width:80px;height:80px;margin-left:-40px;margin-top:-40px;background-position:-160px -80px;transform:rotateY(-90deg) translateZ(40px)"></span>
+<span class="face" style="width:80px;height:80px;margin-left:-40px;margin-top:-40px;background-position:-80px 0px;transform:rotateX(90deg) translateZ(40px)"></span>
+<span class="face" style="width:80px;height:80px;margin-left:-40px;margin-top:-40px;background-position:-160px 0px;transform:rotateX(-90deg) translateZ(40px)"></span>
+</div>
+<div class="skin-part" style="transform:translate3d(0px,-20px,0)">
+<span class="face" style="width:80px;height:120px;margin-left:-40px;margin-top:-60px;background-position:-200px -200px;transform:translateZ(20px)"></span>
+<span class="face" style="width:80px;height:120px;margin-left:-40px;margin-top:-60px;background-position:-320px -200px;transform:rotateY(180deg) translateZ(20px)"></span>
+<span class="face" style="width:40px;height:120px;margin-left:-20px;margin-top:-60px;background-position:-160px -200px;transform:rotateY(90deg) translateZ(40px)"></span>
+<span class="face" style="width:40px;height:120px;margin-left:-20px;margin-top:-60px;background-position:-280px -200px;transform:rotateY(-90deg) translateZ(40px)"></span>
+<span class="face" style="width:80px;height:40px;margin-left:-40px;margin-top:-20px;background-position:-200px -160px;transform:rotateX(90deg) translateZ(60px)"></span>
+<span class="face" style="width:80px;height:40px;margin-left:-40px;margin-top:-20px;background-position:-280px -160px;transform:rotateX(-90deg) translateZ(60px)"></span>
+</div>
+<div class="skin-part" style="transform:translate3d(-60px,-20px,0)">
+<span class="face" style="width:40px;height:120px;margin-left:-20px;margin-top:-60px;background-position:-440px -200px;transform:translateZ(20px)"></span>
+<span class="face" style="width:40px;height:120px;margin-left:-20px;margin-top:-60px;background-position:-520px -200px;transform:rotateY(180deg) translateZ(20px)"></span>
+<span class="face" style="width:40px;height:120px;margin-left:-20px;margin-top:-60px;background-position:-400px -200px;transform:rotateY(90deg) translateZ(20px)"></span>
+<span class="face" style="width:40px;height:120px;margin-left:-20px;margin-top:-60px;background-position:-480px -200px;transform:rotateY(-90deg) translateZ(20px)"></span>
+<span class="face" style="width:40px;height:40px;margin-left:-20px;margin-top:-20px;background-position:-440px -160px;transform:rotateX(90deg) translateZ(60px)"></span>
+<span class="face" style="width:40px;height:40px;margin-left:-20px;margin-top:-20px;background-position:-480px -160px;transform:rotateX(-90deg) translateZ(60px)"></span>
+</div>
+<div class="skin-part" style="transform:translate3d(60px,-20px,0)">
+<span class="face" style="width:40px;height:120px;margin-left:-20px;margin-top:-60px;background-position:-360px -520px;transform:translateZ(20px)"></span>
+<span class="face" style="width:40px;height:120px;margin-left:-20px;margin-top:-60px;background-position:-440px -520px;transform:rotateY(180deg) translateZ(20px)"></span>
+<span class="face" style="width:40px;height:120px;margin-left:-20px;margin-top:-60px;background-position:-320px -520px;transform:rotateY(90deg) translateZ(20px)"></span>
+<span class="face" style="width:40px;height:120px;margin-left:-20px;margin-top:-60px;background-position:-400px -520px;transform:rotateY(-90deg) translateZ(20px)"></span>
+<span class="face" style="width:40px;height:40px;margin-left:-20px;margin-top:-20px;background-position:-360px -480px;transform:rotateX(90deg) translateZ(60px)"></span>
+<span class="face" style="width:40px;height:40px;margin-left:-20px;margin-top:-20px;background-position:-400px -480px;transform:rotateX(-90deg) translateZ(60px)"></span>
+</div>
+<div class="skin-part" style="transform:translate3d(-20px,100px,0)">
+<span class="face" style="width:40px;height:120px;margin-left:-20px;margin-top:-60px;background-position:-40px -200px;transform:translateZ(20px)"></span>
+<span class="face" style="width:40px;height:120px;margin-left:-20px;margin-top:-60px;background-position:-120px -200px;transform:rotateY(180deg) translateZ(20px)"></span>
+<span class="face" style="width:40px;height:120px;margin-left:-20px;margin-top:-60px;background-position:0px -200px;transform:rotateY(90deg) translateZ(20px)"></span>
+<span class="face" style="width:40px;height:120px;margin-left:-20px;margin-top:-60px;background-position:-80px -200px;transform:rotateY(-90deg) translateZ(20px)"></span>
+<span class="face" style="width:40px;height:40px;margin-left:-20px;margin-top:-20px;background-position:-40px -160px;transform:rotateX(90deg) translateZ(60px)"></span>
+<span class="face" style="width:40px;height:40px;margin-left:-20px;margin-top:-20px;background-position:-80px -160px;transform:rotateX(-90deg) translateZ(60px)"></span>
+</div>
+<div class="skin-part" style="transform:translate3d(20px,100px,0)">
+<span class="face" style="width:40px;height:120px;margin-left:-20px;margin-top:-60px;background-position:-200px -520px;transform:translateZ(20px)"></span>
+<span class="face" style="width:40px;height:120px;margin-left:-20px;margin-top:-60px;background-position:-280px -520px;transform:rotateY(180deg) translateZ(20px)"></span>
+<span class="face" style="width:40px;height:120px;margin-left:-20px;margin-top:-60px;background-position:-160px -520px;transform:rotateY(90deg) translateZ(20px)"></span>
+<span class="face" style="width:40px;height:120px;margin-left:-20px;margin-top:-60px;background-position:-240px -520px;transform:rotateY(-90deg) translateZ(20px)"></span>
+<span class="face" style="width:40px;height:40px;margin-left:-20px;margin-top:-20px;background-position:-200px -480px;transform:rotateX(90deg) translateZ(60px)"></span>
+<span class="face" style="width:40px;height:40px;margin-left:-20px;margin-top:-20px;background-position:-240px -480px;transform:rotateX(-90deg) translateZ(60px)"></span>
+</div>
+    </div>
+  </div>
+  <div class="skin-shadow" aria-hidden="true"></div>
+  <div class="viewer-hint" data-i18n="skin_hint">Перетащите, чтобы повернуть · колесо — масштаб</div>
+  <button class="viewer-reset" id="skinReset" type="button" data-i18n="skin_reset">Сбросить</button>
+</div>
+        <div class="hero-skin-label">
+          <span data-i18n="hero_skin_label">Скин в 3D</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="startTitle">
+  <div class="wrap">
+    <div class="section-head-center reveal">
+      <p class="kicker" data-i18n="start_kicker">Как начать</p>
+      <h2 id="startTitle" data-i18n="start_title">Как начать играть?</h2>
+      <p class="section-lead" data-i18n="start_lead">Три шага — и ты в игре. Лаунчер сам подберёт Java и скачает нужные файлы.</p>
+    </div>
+    <div class="steps-grid">
+      <article class="step-card reveal" style="--d:.02s">
+        <div class="step-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11M7 10l5 5 5-5M4 20h16"/></svg></div>
+        <div class="step-num">1</div>
+        <h3 data-i18n="step1_t">Скачай</h3>
+        <p data-i18n="step1_d">Лаунчер для Windows, установка за минуту.</p>
+      </article>
+      <article class="step-card reveal" style="--d:.08s">
+        <div class="step-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-6 8-6s8 2 8 6"/></svg></div>
+        <div class="step-num">2</div>
+        <h3 data-i18n="step2_t">Войди</h3>
+        <p data-i18n="step2_d">Через Ely.by или Offline — без Microsoft.</p>
+      </article>
+      <article class="step-card reveal" style="--d:.14s">
+        <div class="step-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></div>
+        <div class="step-num">3</div>
+        <h3 data-i18n="step3_t">Играй</h3>
+        <p data-i18n="step3_d">Выбери сборку — лаунчер сам подтянет моды и Java.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section build-section" aria-labelledby="buildsTitle">
+  <div class="wrap build-grid">
+    <div class="build-copy">
+      <p class="kicker reveal" data-i18n="builds_kicker">Сборки от Noble</p>
+      <h2 class="reveal" id="buildsTitle" data-i18n="builds_title">10 сборок от Noble</h2>
+      <p class="section-lead reveal" data-i18n="builds_lead">Готовые оптимизации для NVIDIA, AMD и Intel: Sodium, Lithium, Iris и подобранные настройки. Больше FPS на слабых ПК и стабильный кадр на средних.</p>
+      <p class="section-lead reveal" style="margin-top:10px" data-i18n="builds_lead2">Каждая сборка — лёгкий манифест: лаунчер скачает только нужные моды и поставит их в выбранную сборку.</p>
+      <ul class="build-list reveal">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg><span data-i18n="builds_f1">10 пресетов под разное железо</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg><span data-i18n="builds_f2">Установка в один клик из лаунчера</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg><span data-i18n="builds_f3">Sodium, Lithium, Iris и оптимизация памяти</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg><span data-i18n="builds_f4">Minecraft, Java и моды — автоматически</span></li>
+      </ul>
+      <a class="btn btn-red reveal" href="https://github.com/DevvTorn/NobleLauncher/releases/download/Version-2/NobleLauncherSetup-2.9.0.exe"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg><span data-i18n="builds_cta">Установить сборку</span></a>
+    </div>
+    <div class="build-media reveal">
+      <figure class="build-shot primary">
+        <img src="assets/screenshots/builds-noble.png" width="1264" height="761" loading="lazy" alt="Noble Launcher 2.9.0: список сборок от Noble" data-i18n-attr="alt:builds_shot1_alt">
+      </figure>
+      <figure class="build-shot secondary">
+        <img src="assets/screenshots/mods-queue.png" width="1264" height="761" loading="lazy" alt="Noble Launcher 2.9.0: установка модов и очередь загрузок" data-i18n-attr="alt:builds_shot2_alt">
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="section advantages-section" aria-labelledby="advantagesTitle">
+  <div class="wrap">
+    <div class="section-head-center reveal">
+      <p class="kicker" data-i18n="advantages_kicker">Всё внутри</p>
+      <h2 id="advantagesTitle" data-i18n="advantages_title">Всё, что нужно для игры, уже внутри</h2>
+      <p class="section-lead" data-i18n="advantages_lead">Аккаунт, сборки, моды и скины — в одном приложении. Ничего не нужно ставить отдельно.</p>
+    </div>
+    <div class="adv-grid">
+      <article class="adv-card reveal" style="--d:.02s">
+        <div class="adv-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8l4.5 3L12 5l4.5 6L21 8l-2 10H5L3 8z"/><path d="M5 21h14"/></svg></div>
+        <h3 data-i18n="adv1_t">Собственный лаунчер</h3>
+        <p data-i18n="adv1_d">Сам ставит Java, Minecraft и моды, следит за обновлениями.</p>
+      </article>
+      <article class="adv-card reveal" style="--d:.08s">
+        <div class="adv-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-6 8-6s8 2 8 6"/></svg></div>
+        <h3 data-i18n="adv2_t">Единый аккаунт</h3>
+        <p data-i18n="adv2_d">Один вход для лаунчера и игры. Ely.by или Offline.</p>
+      </article>
+      <article class="adv-card reveal" style="--d:.14s">
+        <div class="adv-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M8 8h2M14 8h2M9 14h6"/></svg></div>
+        <h3 data-i18n="adv3_t">Скины и плащи в 3D</h3>
+        <p data-i18n="adv3_d">Загружаешь скин и сразу видишь, как он выглядит в игре.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section community-section" aria-labelledby="communityTitle">
+  <div class="wrap">
+    <div class="section-head-center reveal">
+      <p class="kicker" data-i18n="community_kicker">Сообщество</p>
+      <h2 id="communityTitle" data-i18n="community_title">Играем вместе</h2>
+      <p class="section-lead" data-i18n="community_lead">Новости, помощь и общение с игроками. Заходи, мы на связи.</p>
+    </div>
+    <div class="community-grid">
+      <a class="community-card reveal" style="--d:.02s" href="https://t.me/noblelauncher" target="_blank" rel="noopener noreferrer">
+        <span class="community-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 4 3 11l6 2 2 6 3-4 5 3 2-14z"/></svg></span>
+        <span class="community-copy"><strong data-i18n="community_tg_t">Telegram</strong><span data-i18n="community_tg_d">Новости и обновления</span></span>
+        <span class="community-arrow" aria-hidden="true">↗</span>
+      </a>
+      <a class="community-card reveal" style="--d:.08s" href="https://github.com/DevvTorn/NobleLauncher" target="_blank" rel="noopener noreferrer">
+        <span class="community-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.18-3.37-1.18-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.6 9.6 0 0 1 12 6.8c.85 0 1.7.11 2.5.34 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg></span>
+        <span class="community-copy"><strong data-i18n="community_gh_t">GitHub</strong><span data-i18n="community_gh_d">Исходный код и релизы</span></span>
+        <span class="community-arrow" aria-hidden="true">↗</span>
+      </a>
+      <a class="community-card reveal" style="--d:.14s" href="https://noblelauncher.ru/" target="_blank" rel="noopener noreferrer">
+        <span class="community-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3z"/></svg></span>
+        <span class="community-copy"><strong data-i18n="community_site_t">Сайт</strong><span data-i18n="community_site_d">noblelauncher.ru</span></span>
+        <span class="community-arrow" aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="footer-brand" href="index.html">
+          <img src="assets/logo.png" width="32" height="32" alt="Noble Launcher" data-i18n-attr="alt:brand_alt">
+          <span>Noble Launcher</span>
+        </a>
+        <p data-i18n="footer_about">Собственный лаунчер Minecraft на C++/Qt: Ely.by и офлайн, сборки, моды и 3D-скины.</p>
+      </div>
+      <div>
+        <h3 data-i18n="footer_nav">Страницы</h3>
+        <a href="index.html" data-i18n="nav_home">Главная</a>
+        <a href="features.html" data-i18n="nav_features">Возможности</a>
+        <a href="about.html" data-i18n="nav_about">О проекте</a>
+      </div>
+      <div>
+        <h3 data-i18n="footer_project">Проект</h3>
+        <a href="https://t.me/noblelauncher" target="_blank" rel="noopener noreferrer">Telegram</a>
+        <a href="https://github.com/DevvTorn/NobleLauncher" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://noblelauncher.ru/" target="_blank" rel="noopener noreferrer">noblelauncher.ru</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="footer_rights">© 2026 Noble Launcher. Все права защищены.</span>
+      <span class="footer-version">Noble Launcher · v2.9.0</span>
+    </div>
+  </div>
+</footer>
+<script>const I18N = {"ru": {"brand": "Noble Launcher", "nav_home": "Главная", "nav_features": "Возможности", "nav_about": "О проекте", "nav_download": "Скачать", "download": "Скачать", "download_installer": "Скачать установщик", "menu": "Меню", "language": "Язык сайта", "footer_about": "Собственный лаунчер Minecraft на C++/Qt: Ely.by и офлайн, сборки, моды и 3D-скины.", "footer_nav": "Страницы", "footer_project": "Проект", "footer_rights": "© 2026 Noble Launcher. Все права защищены.", "tg": "Telegram", "github": "GitHub", "site": "noblelauncher.ru", "brand_alt": "Логотип Noble Launcher", "skip": "Перейти к содержанию", "version": "Версия 2.9.0", "meta_title": "Скачать Minecraft бесплатно — Noble Launcher 2.9.0 для Windows", "meta_description": "Скачать Minecraft бесплатно: Noble Launcher 2.9.0 — бесплатный и удобный лаунчер для Minecraft на ПК. Ely.by и офлайн, сборки, моды Modrinth, 3D-скины и оптимизация игры.", "og_title": "Скачать Minecraft бесплатно — Noble Launcher 2.9.0", "og_description": "Бесплатный и удобный лаунчер на ПК: Ely.by и офлайн, сборки, моды Modrinth, 3D-скины, свои фоны и оптимизация игры.", "twitter_title": "Скачать Minecraft бесплатно — Noble Launcher 2.9.0", "twitter_description": "Бесплатный и удобный лаунчер на ПК: Ely.by и офлайн, сборки, моды Modrinth, 3D-скины и оптимизация игры.", "og_image_alt": "Noble Launcher 2.9.0 — лаунчер Minecraft для Windows", "hero_badge": "Minecraft · Windows · 2.9.0", "hero_h1a": "Скачать Minecraft", "hero_h1b": "бесплатно", "hero_lead": "Свой лаунчер. Скачал, вошёл, играешь — Java и сборки ставятся сами.", "hero_sub": "Ely.by или офлайн-аккаунт. Данные — на вашем диске.", "hero_note": "Windows 10/11 x64 · установщик 2.9.0 · без прав администратора", "hero_features": "Возможности", "shot_hero_key": "Запуск и сборки", "shot_hero_alt": "Noble Launcher 2.9.0: красно-чёрный интерфейс, сборки и запуск игры", "shot_hero": "assets/screenshots/main-ru.png", "start_kicker": "Как начать", "start_title": "Как начать играть?", "start_lead": "Три шага — и ты в игре. Лаунчер сам подберёт Java и скачает нужные файлы.", "step1_t": "Скачай", "step1_d": "Лаунчер для Windows, установка за минуту.", "step2_t": "Войди", "step2_d": "Через Ely.by или Offline — без Microsoft.", "step3_t": "Играй", "step3_d": "Выбери сборку — лаунчер сам подтянет моды и Java.", "start_shot_alt": "Noble Launcher 2.9.0: установка модов и очередь загрузок", "start_shot_caption": "Моды и очередь загрузок · 2.9.0", "skin_kicker": "3D-скины", "skin_title": "Всё, что нужно для игры, уже внутри", "skin_lead": "Аккаунт, сборки, моды и скины — в одном приложении. Ничего не нужно ставить отдельно.", "adv1_t": "Собственный лаунчер", "adv1_d": "Сам ставит Java, Minecraft и моды, следит за обновлениями.", "adv2_t": "Единый аккаунт", "adv2_d": "Один вход для лаунчера и игры. Ely.by или Offline.", "adv3_t": "Скины и плащи в 3D", "adv3_d": "Загружаешь скин и сразу видишь, как он выглядит в игре.", "skin_hint": "Перетащите, чтобы повернуть · колесо — масштаб", "skin_reset": "Сбросить", "skin_viewer_aria": "Интерактивная 3D-модель Стива: вращение и масштаб", "cta_title": "Готовы играть?", "cta_lead": "Скачайте Noble Launcher 2.9.0 и соберите свой первый мир.", "nav_aria": "Навигация по сайту", "hero_h1c": "— Noble Launcher", "hero_skin_label": "Скин в 3D", "builds_kicker": "Сборки от Noble", "builds_title": "10 сборок от Noble", "builds_lead": "Готовые оптимизации для NVIDIA, AMD и Intel: Sodium, Lithium, Iris и подобранные настройки. Больше FPS на слабых ПК и стабильный кадр на средних.", "builds_lead2": "Каждая сборка — лёгкий манифест: лаунчер скачает только нужные моды и поставит их в выбранную сборку.", "builds_f1": "10 пресетов под разное железо", "builds_f2": "Установка в один клик из лаунчера", "builds_f3": "Sodium, Lithium, Iris и оптимизация памяти", "builds_f4": "Minecraft, Java и моды — автоматически", "builds_cta": "Установить сборку", "builds_shot1_alt": "Noble Launcher 2.9.0: список сборок от Noble", "builds_shot2_alt": "Noble Launcher 2.9.0: установка модов и очередь загрузок", "advantages_kicker": "Всё внутри", "advantages_title": "Всё, что нужно для игры, уже внутри", "advantages_lead": "Аккаунт, сборки, моды и скины — в одном приложении. Ничего не нужно ставить отдельно.", "community_kicker": "Сообщество", "community_title": "Играем вместе", "community_lead": "Новости, помощь и общение с игроками. Заходи, мы на связи.", "community_tg_t": "Telegram", "community_tg_d": "Новости и обновления", "community_gh_t": "GitHub", "community_gh_d": "Исходный код и релизы", "community_site_t": "Сайт", "community_site_d": "noblelauncher.ru"}, "en": {"brand": "Noble Launcher", "nav_home": "Home", "nav_features": "Features", "nav_about": "About", "nav_download": "Download", "download": "Download", "download_installer": "Download installer", "menu": "Menu", "language": "Site language", "footer_about": "A custom Minecraft launcher built with C++/Qt: Ely.by and offline, builds, mods and 3D skins.", "footer_nav": "Pages", "footer_project": "Project", "footer_rights": "© 2026 Noble Launcher. All rights reserved.", "tg": "Telegram", "github": "GitHub", "site": "noblelauncher.ru", "brand_alt": "Noble Launcher logo", "skip": "Skip to content", "version": "Version 2.9.0", "meta_title": "Minecraft Launcher Download — Noble Launcher 2.9.0 for Windows (Free)", "meta_description": "Minecraft launcher download for PC: download Minecraft free with Noble Launcher 2.9.0 — Ely.by and offline accounts, builds, Modrinth mods, 3D skins and game optimization. Free and convenient PC launcher.", "og_title": "Minecraft Launcher Download — Noble Launcher 2.9.0", "og_description": "Minecraft launcher download for PC: a free and convenient launcher with Ely.by and offline accounts, builds, Modrinth mods, 3D skins and game optimization.", "twitter_title": "Minecraft Launcher Download — Noble Launcher 2.9.0", "twitter_description": "A free and convenient PC launcher: Ely.by and offline accounts, builds, Modrinth mods, 3D skins and game optimization.", "og_image_alt": "Noble Launcher 2.9.0 — Minecraft launcher for Windows", "hero_badge": "Minecraft · Windows · 2.9.0", "hero_h1a": "Download Minecraft", "hero_h1b": "free", "hero_lead": "Your own launcher. Download, sign in, play — Java and builds install themselves.", "hero_sub": "Ely.by or an offline account. Your data stays on your disk.", "hero_note": "Windows 10/11 x64 · 2.9.0 installer · no administrator rights", "hero_features": "Features", "shot_hero_key": "Launch and builds", "shot_hero_alt": "Noble Launcher 2.9.0: red-black interface, builds and game launch", "shot_hero": "assets/screenshots/main-en.png", "start_kicker": "How it works", "start_title": "How to start playing?", "start_lead": "Three steps and you're in. The launcher picks Java and downloads the right files itself.", "step1_t": "Download", "step1_d": "Windows launcher, one-minute setup.", "step2_t": "Sign in", "step2_d": "With Ely.by or Offline — no Microsoft.", "step3_t": "Play", "step3_d": "Pick a build — the launcher brings mods and Java.", "start_shot_alt": "Noble Launcher 2.9.0: mod installation and download queue", "start_shot_caption": "Mods and download queue · 2.9.0", "skin_kicker": "3D skins", "skin_title": "Everything you need to play is already inside", "skin_lead": "Account, builds, mods and skins in one app. Nothing else to install.", "adv1_t": "A launcher of its own", "adv1_d": "Installs Java, Minecraft and mods by itself and keeps them updated.", "adv2_t": "One account", "adv2_d": "One sign-in for the launcher and the game. Ely.by or Offline.", "adv3_t": "3D skins and capes", "adv3_d": "Upload a skin and see right away how it looks in game.", "skin_hint": "Drag to rotate · scroll to zoom", "skin_reset": "Reset", "skin_viewer_aria": "Interactive 3D Steve model: rotate and zoom", "cta_title": "Ready to play?", "cta_lead": "Download Noble Launcher 2.9.0 and build your first world.", "nav_aria": "Site navigation", "hero_h1c": "— Noble Launcher", "hero_skin_label": "Skin in 3D", "builds_kicker": "Noble builds", "builds_title": "10 Noble builds", "builds_lead": "Ready optimizations for NVIDIA, AMD and Intel: Sodium, Lithium, Iris and tuned settings. More FPS on low-end PCs and stable frame times on mid-range.", "builds_lead2": "Each build is a light manifest: the launcher downloads only the required mods and installs them into the selected build.", "builds_f1": "10 presets for different hardware", "builds_f2": "One-click install from the launcher", "builds_f3": "Sodium, Lithium, Iris and memory optimization", "builds_f4": "Minecraft, Java and mods — automatically", "builds_cta": "Install build", "builds_shot1_alt": "Noble Launcher 2.9.0: Noble builds list", "builds_shot2_alt": "Noble Launcher 2.9.0: mod installation and download queue", "advantages_kicker": "All inside", "advantages_title": "Everything you need to play is already inside", "advantages_lead": "Account, builds, mods and skins in one app. Nothing else to install.", "community_kicker": "Community", "community_title": "Let's play together", "community_lead": "News, help and conversations with players. Join us — we're here.", "community_tg_t": "Telegram", "community_tg_d": "News and updates", "community_gh_t": "GitHub", "community_gh_d": "Source code and releases", "community_site_t": "Website", "community_site_d": "noblelauncher.ru"}};
+
+(function(){
+  "use strict";
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function each(list, fn){ Array.prototype.forEach.call(list, fn); }
+
+  function applyLanguage(lang){
+    if (lang !== "ru" && lang !== "en") lang = "ru";
+    var dict = I18N[lang] || I18N.ru;
+    document.documentElement.lang = lang;
+    each(document.querySelectorAll("[data-i18n]"), function(el){
+      var key = el.getAttribute("data-i18n");
+      if (dict[key] !== undefined) el.textContent = dict[key];
+    });
+    each(document.querySelectorAll("[data-i18n-attr]"), function(el){
+      el.getAttribute("data-i18n-attr").split(",").forEach(function(pair){
+        var bits = pair.split(":");
+        var attr = (bits[0] || "").trim();
+        var key = (bits[1] || "").trim();
+        if (attr && dict[key] !== undefined) el.setAttribute(attr, dict[key]);
+      });
+    });
+    each(document.querySelectorAll("[data-i18n-src]"), function(el){
+      var key = el.getAttribute("data-i18n-src");
+      if (dict[key]) el.setAttribute("src", dict[key]);
+    });
+    each(document.querySelectorAll("[data-i18n-meta]"), function(el){
+      var key = el.getAttribute("data-i18n-meta");
+      var value = dict[key];
+      if (value === undefined) return;
+      if (el.tagName === "TITLE") el.textContent = value;
+      else el.setAttribute("content", value);
+    });
+    each(document.querySelectorAll("[data-lang-btn]"), function(btn){
+      btn.setAttribute("aria-pressed", btn.getAttribute("data-lang-btn") === lang ? "true" : "false");
+    });
+    try { localStorage.setItem("noble-lang", lang); } catch (e) {}
+    document.documentElement.setAttribute("lang", lang);
+  }
+  window.applyLanguage = applyLanguage;
+
+  function initialLanguage(){
+    try {
+      var params = new URLSearchParams(window.location.search);
+      var query = (params.get("lang") || "").toLowerCase();
+      if (query === "ru" || query === "en") return query;
+      var saved = localStorage.getItem("noble-lang");
+      if (saved === "ru" || saved === "en") return saved;
+    } catch (e) {}
+    var nav = (navigator.language || "ru").toLowerCase();
+    if (nav.indexOf("ru") === 0) return "ru";
+    if (nav.indexOf("en") === 0) return "en";
+    return "ru";
+  }
+
+  each(document.querySelectorAll("[data-lang-btn]"), function(btn){
+    btn.addEventListener("click", function(){ applyLanguage(btn.getAttribute("data-lang-btn")); });
+  });
+  applyLanguage(initialLanguage());
+
+  var header = document.getElementById("siteHeader");
+  var burger = document.getElementById("burger");
+  var nav = document.getElementById("mainNav");
+  function closeNav(){
+    if (!header) return;
+    header.classList.remove("nav-open");
+    if (burger) burger.setAttribute("aria-expanded", "false");
+  }
+  if (burger) {
+    burger.addEventListener("click", function(){
+      var open = header.classList.toggle("nav-open");
+      burger.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+  }
+  each(document.querySelectorAll("#mainNav a"), function(link){ link.addEventListener("click", closeNav); });
+  document.addEventListener("keydown", function(e){ if (e.key === "Escape") closeNav(); });
+  window.addEventListener("scroll", function(){
+    if (header) header.classList.toggle("scrolled", window.scrollY > 8);
+  }, {passive:true});
+
+  var year = document.getElementById("year");
+  if (year) year.textContent = String(new Date().getFullYear());
+
+  var reveals = document.querySelectorAll(".reveal");
+  if (reduce || !("IntersectionObserver" in window)) {
+    each(reveals, function(el){ el.classList.add("in"); });
+  } else {
+    var viewport = window.innerHeight || 800;
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("in");
+        io.unobserve(entry.target);
+      });
+    }, {threshold:0.1, rootMargin:"0px 0px -30px"});
+    each(reveals, function(el){
+      var top = el.getBoundingClientRect().top;
+      if (top > viewport * 0.92) {
+        el.classList.add("pre");
+        io.observe(el);
+      }
+    });
+  }
+
+  if (!reduce) {
+    var hero = document.querySelector(".hero");
+    var cubes = document.querySelectorAll(".hero-cube");
+    if (hero && cubes.length) {
+      var raf = 0;
+      hero.addEventListener("mousemove", function(event){
+        if (raf) return;
+        raf = requestAnimationFrame(function(){
+          raf = 0;
+          var rect = hero.getBoundingClientRect();
+          var mx = (event.clientX - rect.left) / rect.width - 0.5;
+          var my = (event.clientY - rect.top) / rect.height - 0.5;
+          each(cubes, function(cube, index){
+            var depth = 10 + index * 3;
+            cube.style.transform = "translate(" + (mx * depth) + "px," + (my * depth) + "px)";
+          });
+        });
+      });
+      hero.addEventListener("mouseleave", function(){
+        each(cubes, function(cube){ cube.style.transform = ""; });
+      });
+    }
+  }
+
+  var viewer = document.getElementById("skinViewer");
+  if (viewer) {
+    var model = document.getElementById("skinModel");
+    var reset = document.getElementById("skinReset");
+    var yaw = -20, pitch = -8, zoom = 1, dragging = false, auto = true;
+    var lastX = 0, lastY = 0;
+    function baseScale(){
+      var width = window.innerWidth;
+      return width < 560 ? 0.66 : width < 860 ? 0.78 : width < 1040 ? 0.9 : 1;
+    }
+    function paint(){
+      model.style.transform = "rotateX(" + pitch + "deg) rotateY(" + yaw + "deg) scale(" + (zoom * baseScale()) + ")";
+    }
+    viewer.addEventListener("pointerdown", function(e){
+      dragging = true; auto = false;
+      lastX = e.clientX; lastY = e.clientY;
+      try { viewer.setPointerCapture(e.pointerId); } catch (err) {}
+    });
+    viewer.addEventListener("pointermove", function(e){
+      if (!dragging) return;
+      yaw += (e.clientX - lastX) * 0.55;
+      pitch = Math.max(-32, Math.min(32, pitch - (e.clientY - lastY) * 0.35));
+      lastX = e.clientX; lastY = e.clientY;
+      paint();
+    });
+    function endDrag(){
+      if (!dragging) return;
+      dragging = false;
+      window.setTimeout(function(){ auto = true; }, 1600);
+    }
+    viewer.addEventListener("pointerup", endDrag);
+    viewer.addEventListener("pointercancel", endDrag);
+    viewer.addEventListener("wheel", function(e){
+      e.preventDefault();
+      zoom = Math.max(0.62, Math.min(1.65, zoom + (e.deltaY > 0 ? -0.07 : 0.07)));
+      paint();
+    }, {passive:false});
+    if (reset) reset.addEventListener("click", function(){
+      yaw = -20; pitch = -8; zoom = 1; paint();
+    });
+    viewer.addEventListener("keydown", function(e){
+      var step = 6;
+      if (e.key === "ArrowLeft") { yaw -= step; e.preventDefault(); }
+      else if (e.key === "ArrowRight") { yaw += step; e.preventDefault(); }
+      else if (e.key === "ArrowUp") { pitch = Math.max(-32, pitch - step); e.preventDefault(); }
+      else if (e.key === "ArrowDown") { pitch = Math.min(32, pitch + step); e.preventDefault(); }
+      else if (e.key === "+" || e.key === "=") { zoom = Math.min(1.65, zoom + 0.08); e.preventDefault(); }
+      else if (e.key === "-") { zoom = Math.max(0.62, zoom - 0.08); e.preventDefault(); }
+      else if (e.key === "Home") { yaw = -20; pitch = -8; zoom = 1; e.preventDefault(); }
+      paint();
+    });
+    window.addEventListener("resize", paint);
+    paint();
+    if (!reduce) {
+      (function tick(){
+        if (auto && !dragging) { yaw += 0.12; paint(); }
+        requestAnimationFrame(tick);
+      })();
+    }
+  }
+})();
+</script>
+</body>
+</html>
